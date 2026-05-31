@@ -1,0 +1,8 @@
+{
+  "version": "1.0.3",
+  "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/launcher-1.0.3/DeluxeWarfareLauncher-Setup-1.0.3.exe",
+  "sha256": "abddca30a5bdec49be77b57249fba7b4faebb12c4b12bc978d2bc5936f245053",
+  "size": 42022994,
+  "mandatory": false,
+  "notes": "Config migration for Discord auth and Java runtime."
+}
