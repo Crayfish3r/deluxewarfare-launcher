@@ -89,13 +89,6 @@
       "required": true
     },
     {
-      "path": "mods/replaymod-1.20.1-2.6.13.jar",
-      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__replaymod-1.20.1-2.6.13.jar",
-      "sha256": "337bcd3baac269ba2a408dbd547fe3ea10f316e9cfc9d70e46c08fc09f3424d7",
-      "size": 13075030,
-      "required": true
-    },
-    {
       "path": "mods/superbwarfare-0.8.9-final-mc1.20.1-6effe4385-all.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__superbwarfare-0.8.9-final-mc1.20.1-6effe4385-all.jar",
       "sha256": "6eece0df9c927bddee3bd373fe90a2bbcba7157e9408ee0f94d13e04dc638395",
@@ -152,7 +145,6 @@
     "geckolib-forge-1.20.1-4.7.jar",
     "kotlinforforge-4.12.0-all.jar",
     "Patchouli-1.20.1-85-FORGE.jar",
-    "replaymod-1.20.1-2.6.13.jar",
     "superbwarfare-0.8.9-final-mc1.20.1-6effe4385-all.jar",
     "TacticacTabletTeams-0.1.jar",
     "tacz-1.20.1-1.1.8-hotfix.jar",
