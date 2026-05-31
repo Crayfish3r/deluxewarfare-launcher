@@ -1,0 +1,163 @@
+{
+  "minecraftVersion": "1.20.1",
+  "forgeVersion": "47.4.20",
+  "modpackVersion": "1.0.0",
+  "requiredJava": 17,
+  "files": [
+    {
+      "path": "mods/cloth-config-11.1.136-forge.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__cloth-config-11.1.136-forge.jar",
+      "sha256": "1e895e85cf5b1e1905ef3178ec155c8badfe22a1577b92c09143a5aa1f4ce0f2",
+      "size": 1181413,
+      "required": true
+    },
+    {
+      "path": "mods/Connector-1.0.0-beta.48-1.20.1.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__Connector-1.0.0-beta.48-1.20.1.jar",
+      "sha256": "6226500de5d240d44244d8f35b402148667cc37a75d63d0e55800e049c82905c",
+      "size": 5043906,
+      "required": true
+    },
+    {
+      "path": "mods/ConnectorExtras-1.11.2+1.20.1.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__ConnectorExtras-1.11.2_1.20.1.jar",
+      "sha256": "10d149fc9348b57120f50e3f82ac6f7e544ae18f0b5b7342c0cab3af38f5acd8",
+      "size": 182464,
+      "required": true
+    },
+    {
+      "path": "mods/CreativeCore_FORGE_v2.12.35_mc1.20.1.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__CreativeCore_FORGE_v2.12.35_mc1.20.1.jar",
+      "sha256": "2c5e9efe5b256b35be24dafea2f8e26e829793fc144e95eeceabf9f1f4e601f2",
+      "size": 1143788,
+      "required": true
+    },
+    {
+      "path": "mods/curios-forge-5.14.1+1.20.1.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__curios-forge-5.14.1_1.20.1.jar",
+      "sha256": "1e817919a35b37cf30524aaec73f0ca5130452f23f168f844854df282eb8e51f",
+      "size": 398066,
+      "required": true
+    },
+    {
+      "path": "mods/embeddium-0.3.31mc1.20.1.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__embeddium-0.3.31mc1.20.1.jar",
+      "sha256": "eed3d1325f2acc2fd4e69bb495e5ccb91d962126ac5330f0582ebc2a3daf47fb",
+      "size": 1320675,
+      "required": true
+    },
+    {
+      "path": "mods/fabric-api-0.92.6+1.11.14+1.20.1.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__fabric-api-0.92.6_1.11.14_1.20.1.jar",
+      "sha256": "9b140af437581d32e5ee17d20f8fe882000e6a34cba85c152ae5bccc9570cc03",
+      "size": 3065813,
+      "required": true
+    },
+    {
+      "path": "mods/forge_auth_mod-0.2.0.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__forge_auth_mod-0.2.0.jar",
+      "sha256": "68779d18900561c6d5263a1d22e5859859a5401914fab1381fa2a080156cb203",
+      "size": 20567,
+      "required": true
+    },
+    {
+      "path": "mods/fracturepoint-1.20.1-2.3.11-beta-all.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__fracturepoint-1.20.1-2.3.11-beta-all.jar",
+      "sha256": "35a74a586e58161e1993a0074d1969cef87e5296c6df67d7affbb2985a434991",
+      "size": 3172716,
+      "required": true
+    },
+    {
+      "path": "mods/geckolib-forge-1.20.1-4.7.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__geckolib-forge-1.20.1-4.7.jar",
+      "sha256": "34c87687f80d6bc098a9a63fb1dc94c288554c8d7e4903143d8ff1742a4b6261",
+      "size": 1004042,
+      "required": true
+    },
+    {
+      "path": "mods/kotlinforforge-4.12.0-all.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__kotlinforforge-4.12.0-all.jar",
+      "sha256": "6a66c6a68ec09f8717cdbf06883394f0ee24d7cd826b7134a0f81839e8e720ae",
+      "size": 7442998,
+      "required": true
+    },
+    {
+      "path": "mods/Patchouli-1.20.1-85-FORGE.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__Patchouli-1.20.1-85-FORGE.jar",
+      "sha256": "05f7b5d52f6b8f0fd7f8b4822fa07a192d1394d83a264309c9d221d6d4fd21c5",
+      "size": 642732,
+      "required": true
+    },
+    {
+      "path": "mods/replaymod-1.20.1-2.6.13.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__replaymod-1.20.1-2.6.13.jar",
+      "sha256": "337bcd3baac269ba2a408dbd547fe3ea10f316e9cfc9d70e46c08fc09f3424d7",
+      "size": 13075030,
+      "required": true
+    },
+    {
+      "path": "mods/superbwarfare-0.8.9-final-mc1.20.1-6effe4385-all.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__superbwarfare-0.8.9-final-mc1.20.1-6effe4385-all.jar",
+      "sha256": "6eece0df9c927bddee3bd373fe90a2bbcba7157e9408ee0f94d13e04dc638395",
+      "size": 31691008,
+      "required": true
+    },
+    {
+      "path": "mods/TacticacTabletTeams-0.1.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__TacticacTabletTeams-0.1.jar",
+      "sha256": "acc2afcbfa7af6e50a9f29da2296e2c0bb6e55c1c2d8a964f718dd0783dbc655",
+      "size": 486942,
+      "required": true
+    },
+    {
+      "path": "mods/tacz-1.20.1-1.1.8-hotfix.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__tacz-1.20.1-1.1.8-hotfix.jar",
+      "sha256": "9ed8ada1283ed7a793a70cc1b51c4a340f367ce84707e1a7b8cf21ee3d288d77",
+      "size": 57465167,
+      "required": true
+    },
+    {
+      "path": "mods/tacz-tweaks-2.14.0-all.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__tacz-tweaks-2.14.0-all.jar",
+      "sha256": "6f6dcba40380b7648c45c9fe15d27e2d03189b6c9cd3574d60b866f0a36c627d",
+      "size": 1930913,
+      "required": true
+    },
+    {
+      "path": "mods/thermal_vision_v3-fixed.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__thermal_vision_v3-fixed.jar",
+      "sha256": "7388574805abaf01eb62dd2dc537222d6674bf840698c3463bbd4a3e82ceb3fc",
+      "size": 664673,
+      "required": true
+    },
+    {
+      "path": "mods/yet_another_config_lib_v3-3.6.6+1.20.1-forge.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__yet_another_config_lib_v3-3.6.6_1.20.1-forge.jar",
+      "sha256": "bd05da3d9df29b914165583f1c6dfd918a138996447ff32c0418329824027a8f",
+      "size": 1105891,
+      "required": true
+    }
+  ],
+  "deleteUnknownMods": true,
+  "allowedMods": [
+    "cloth-config-11.1.136-forge.jar",
+    "Connector-1.0.0-beta.48-1.20.1.jar",
+    "ConnectorExtras-1.11.2+1.20.1.jar",
+    "CreativeCore_FORGE_v2.12.35_mc1.20.1.jar",
+    "curios-forge-5.14.1+1.20.1.jar",
+    "embeddium-0.3.31mc1.20.1.jar",
+    "fabric-api-0.92.6+1.11.14+1.20.1.jar",
+    "forge_auth_mod-0.2.0.jar",
+    "fracturepoint-1.20.1-2.3.11-beta-all.jar",
+    "geckolib-forge-1.20.1-4.7.jar",
+    "kotlinforforge-4.12.0-all.jar",
+    "Patchouli-1.20.1-85-FORGE.jar",
+    "replaymod-1.20.1-2.6.13.jar",
+    "superbwarfare-0.8.9-final-mc1.20.1-6effe4385-all.jar",
+    "TacticacTabletTeams-0.1.jar",
+    "tacz-1.20.1-1.1.8-hotfix.jar",
+    "tacz-tweaks-2.14.0-all.jar",
+    "thermal_vision_v3-fixed.jar",
+    "yet_another_config_lib_v3-3.6.6+1.20.1-forge.jar"
+  ]
+}
