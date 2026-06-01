@@ -1,8 +1,9 @@
 {
-  "version": "1.0.9",
-  "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/launcher-1.0.9/DeluxeWarfareLauncher-Setup-1.0.9.exe",
-  "sha256": "dd5f1f779610bbcf9bea284bd2ce72dd4eb0285d2840ae8828ad09af8b6a2877",
-  "size": 45066409,
+  "version": "1.1.0",
+  "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/launcher-1.1.0/DeluxeWarfareLauncher-Setup-1.1.0.exe",
+  "sha256": "9C2FC9611B24ED5DFB892B3E3038F4C4030872972C45EFB8B58B804B9BC532A3",
+  "size": 44840000,
   "mandatory": false,
-  "notes": "Launcher update."
+  "notes": "Production Minecraft server address and launcher icon update."
 }
+
