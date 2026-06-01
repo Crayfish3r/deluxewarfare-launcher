@@ -1,8 +1,8 @@
 {
-  "version": "1.0.7",
-  "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/launcher-1.0.7/DeluxeWarfareLauncher-Setup-1.0.7.exe",
-  "sha256": "9b33524cf805061adfde64c95517df240aa332ee2acead9d5168449d0de8deb0",
-  "size": 42138304,
+  "version": "1.0.8",
+  "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/launcher-1.0.8/DeluxeWarfareLauncher-Setup-1.0.8.exe",
+  "sha256": "0575b0cc8c1ac7a98f0574c7288b72ffdb1fb11bd4bcbec1b9fac00613c5773b",
+  "size": 42143606,
   "mandatory": false,
   "notes": "Launcher update."
 }
