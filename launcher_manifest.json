@@ -110,13 +110,6 @@
       "required": true
     },
     {
-      "path": "mods/TacticacTabletTeams-0.1.jar",
-      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__TacticacTabletTeams-0.1.jar",
-      "sha256": "acc2afcbfa7af6e50a9f29da2296e2c0bb6e55c1c2d8a964f718dd0783dbc655",
-      "size": 486942,
-      "required": true
-    },
-    {
       "path": "mods/TacticalTablet-fix-0.1.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__TacticalTablet-fix-0.1.jar",
       "sha256": "08b6a80b2ea6d77d5eb82bebcab0b609165a594fef0817998b33538f2dd996a9",
@@ -169,7 +162,6 @@
     "Patchouli-1.20.1-85-FORGE.jar",
     "player-animation-lib-forge-1.0.2-rc1+1.20.jar",
     "superbwarfare-0.8.9-final-mc1.20.1-6effe4385-all.jar",
-    "TacticacTabletTeams-0.1.jar",
     "TacticalTablet-fix-0.1.jar",
     "tacz-1.20.1-1.1.8-hotfix.jar",
     "tacz-tweaks-2.14.0-all.jar",
