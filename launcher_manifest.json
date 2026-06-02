@@ -117,6 +117,13 @@
       "required": true
     },
     {
+      "path": "mods/TacticalTablet-fix-0.1.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__TacticalTablet-fix-0.1.jar",
+      "sha256": "08b6a80b2ea6d77d5eb82bebcab0b609165a594fef0817998b33538f2dd996a9",
+      "size": 748317,
+      "required": true
+    },
+    {
       "path": "mods/tacz-1.20.1-1.1.8-hotfix.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__tacz-1.20.1-1.1.8-hotfix.jar",
       "sha256": "9ed8ada1283ed7a793a70cc1b51c4a340f367ce84707e1a7b8cf21ee3d288d77",
@@ -163,6 +170,7 @@
     "player-animation-lib-forge-1.0.2-rc1+1.20.jar",
     "superbwarfare-0.8.9-final-mc1.20.1-6effe4385-all.jar",
     "TacticacTabletTeams-0.1.jar",
+    "TacticalTablet-fix-0.1.jar",
     "tacz-1.20.1-1.1.8-hotfix.jar",
     "tacz-tweaks-2.14.0-all.jar",
     "thermal_vision_v3-fixed.jar",
