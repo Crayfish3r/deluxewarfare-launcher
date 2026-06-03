@@ -5,6 +5,13 @@
   "requiredJava": 17,
   "files": [
     {
+      "path": "mods/CameraOverhaul-v2.1.1-forge+mc[1.20-1.20.5].jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__CameraOverhaul-v2.1.1-forge_mc_1.20-1.20.5_.jar",
+      "sha256": "af4f381a19c7ce39e019025955c2a9767b8b5c0d8b826d2975e60d9da466e492",
+      "size": 139793,
+      "required": true
+    },
+    {
       "path": "mods/cloth-config-11.1.136-forge.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__cloth-config-11.1.136-forge.jar",
       "sha256": "1e895e85cf5b1e1905ef3178ec155c8badfe22a1577b92c09143a5aa1f4ce0f2",
@@ -89,6 +96,20 @@
       "required": true
     },
     {
+      "path": "mods/ParCool-1.20.1-3.4.3.3.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__ParCool-1.20.1-3.4.3.3.jar",
+      "sha256": "2ddef8752b5a1428035b95f29e62c81e33b80d37851681e1b928d8a01615c6e7",
+      "size": 1154052,
+      "required": true
+    },
+    {
+      "path": "mods/ParCool-CompatibilityAddon-1.20.1-3.4.1.5-1.1.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__ParCool-CompatibilityAddon-1.20.1-3.4.1.5-1.1.jar",
+      "sha256": "f7cf79f065b076f03ca42e7abb33cb00aa3ed8ca0743296dc25549c2efbc3871",
+      "size": 24155,
+      "required": true
+    },
+    {
       "path": "mods/Patchouli-1.20.1-85-FORGE.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__Patchouli-1.20.1-85-FORGE.jar",
       "sha256": "05f7b5d52f6b8f0fd7f8b4822fa07a192d1394d83a264309c9d221d6d4fd21c5",
@@ -112,8 +133,8 @@
     {
       "path": "mods/TacticalTablet-fix-0.1.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__TacticalTablet-fix-0.1.jar",
-      "sha256": "08b6a80b2ea6d77d5eb82bebcab0b609165a594fef0817998b33538f2dd996a9",
-      "size": 748317,
+      "sha256": "9456e48ff976a8e3c9a42c70bba263e6d61a68ff3c4771b599a07bc1537d771a",
+      "size": 756627,
       "required": true
     },
     {
@@ -128,6 +149,13 @@
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__tacz-tweaks-2.14.0-all.jar",
       "sha256": "6f6dcba40380b7648c45c9fe15d27e2d03189b6c9cd3574d60b866f0a36c627d",
       "size": 1930913,
+      "required": true
+    },
+    {
+      "path": "mods/taczleaning-1.0.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__taczleaning-1.0.jar",
+      "sha256": "457ea127a154a5e4d14692920783a3604ba90433c689cc7480ad4c1314499ff0",
+      "size": 11503,
       "required": true
     },
     {
@@ -147,6 +175,7 @@
   ],
   "deleteUnknownMods": true,
   "allowedMods": [
+    "CameraOverhaul-v2.1.1-forge+mc[1.20-1.20.5].jar",
     "cloth-config-11.1.136-forge.jar",
     "Connector-1.0.0-beta.48-1.20.1.jar",
     "ConnectorExtras-1.11.2+1.20.1.jar",
@@ -159,12 +188,15 @@
     "geckolib-forge-1.20.1-4.7.jar",
     "kotlinforforge-4.12.0-all.jar",
     "lrtactical-1.20.1-0.4.1.jar",
+    "ParCool-1.20.1-3.4.3.3.jar",
+    "ParCool-CompatibilityAddon-1.20.1-3.4.1.5-1.1.jar",
     "Patchouli-1.20.1-85-FORGE.jar",
     "player-animation-lib-forge-1.0.2-rc1+1.20.jar",
     "superbwarfare-0.8.9-final-mc1.20.1-6effe4385-all.jar",
     "TacticalTablet-fix-0.1.jar",
     "tacz-1.20.1-1.1.8-hotfix.jar",
     "tacz-tweaks-2.14.0-all.jar",
+    "taczleaning-1.0.jar",
     "thermal_vision_v3-fixed.jar",
     "yet_another_config_lib_v3-3.6.6+1.20.1-forge.jar"
   ]
