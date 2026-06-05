@@ -1,8 +1,8 @@
 {
-    "version":  "1.1.4",
-    "url":  "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/launcher-1.1.4/DeluxeWarfareLauncher-Setup-1.1.4.exe",
-    "sha256":  "10858775d677ccf6e5590c2818d36dac2457b464ba82d61da5eb129284246da4",
-    "size":  44762769,
+    "version":  "1.1.5",
+    "url":  "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/launcher-1.1.5/DeluxeWarfareLauncher-Setup-1.1.5.exe",
+    "sha256":  "5319af8e433112fc7b1af6a5fb5e96eb2fd1953172e3c08dba85a0abb05239af",
+    "size":  44759742,
     "mandatory":  true,
-    "notes":  "Required launcher update: updates DonationAlerts URL and bundled donation products."
+    "notes":  "Required launcher update: migrates DonationAlerts URL, validates saved Discord sessions, and terminates Minecraft when launcher closes."
 }
