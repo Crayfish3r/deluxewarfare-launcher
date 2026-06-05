@@ -1,0 +1,32 @@
+[
+  {
+    "id": "SUPPORTER_30D",
+    "code": "D001",
+    "title": "Supporter РЅР° 30 РґРЅРµР№",
+    "price": 299,
+    "currency": "RUB",
+    "description": "РџСЂРµС„РёРєСЃ, Р·РЅР°С‡РѕРє РїСЂРѕС„РёР»СЏ Рё СЂРѕР»СЊ Supporter РІ Discord. РќРµ РґР°С‘С‚ Р±РѕРµРІРѕРіРѕ РїСЂРµРёРјСѓС‰РµСЃС‚РІР°.",
+    "rewardType": "SUPPORTER",
+    "enabled": true
+  },
+  {
+    "id": "GLOBAL_COINS_BOOST_1H",
+    "code": "D002",
+    "title": "Р“Р»РѕР±Р°Р»СЊРЅС‹Р№ Р±СѓСЃС‚РµСЂ coins",
+    "price": 499,
+    "currency": "RUB",
+    "description": "+20% coins РІСЃРµРј РёРіСЂРѕРєР°Рј СЃРµСЂРІРµСЂР° РЅР° 1 С‡Р°СЃ.",
+    "rewardType": "GLOBAL_BOOST",
+    "enabled": true
+  },
+  {
+    "id": "COSMETIC_FRAME_GREEN",
+    "code": "D003",
+    "title": "Р—РµР»С‘РЅР°СЏ СЂР°РјРєР° РїСЂРѕС„РёР»СЏ",
+    "price": 199,
+    "currency": "RUB",
+    "description": "РљРѕСЃРјРµС‚РёС‡РµСЃРєР°СЏ СЂР°РјРєР° РїСЂРѕС„РёР»СЏ РІ Р»Р°СѓРЅС‡РµСЂРµ/РёРіСЂРµ. РќРµ РІР»РёСЏРµС‚ РЅР° РіРµР№РјРїР»РµР№.",
+    "rewardType": "COSMETIC",
+    "enabled": true
+  }
+]
