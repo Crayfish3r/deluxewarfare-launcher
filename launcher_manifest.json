@@ -133,8 +133,8 @@
     {
       "path": "mods/TacticalTablet-fix-0.1.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__TacticalTablet-fix-0.1.jar",
-      "sha256": "7cf40fe36e666d7152c1bd6097e11b563ca0352437b0ba6246856824ba1114ba",
-      "size": 756644,
+      "sha256": "76fcd9d00491c7104af18fcc0a67c02bc69145c3d7fd724cfbc6d3fa410fb4cb",
+      "size": 835033,
       "required": true
     },
     {
@@ -173,20 +173,7 @@
       "required": true
     }
   ],
-  "optionalAllowedFiles": [
-    {
-      "path": "mods/entityculling-forge-1.10.2-mc1.20.1.jar",
-      "sha256": "34da8e10cf31ade2b86b02e4f55c4d3b480a0992148ac12f9ec49eb7be4bfda0",
-      "size": 1587585,
-      "required": false
-    },
-    {
-      "path": "mods/replaymod-1.20.1-2.6.13.jar",
-      "sha256": "337bcd3baac269ba2a408dbd547fe3ea10f316e9cfc9d70e46c08fc09f3424d7",
-      "size": 13075030,
-      "required": false
-    }
-  ],
+  "optionalAllowedFiles": [],
   "deleteUnknownMods": true,
   "allowedMods": [
     "CameraOverhaul-v2.1.1-forge+mc[1.20-1.20.5].jar",
