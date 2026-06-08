@@ -1,8 +1,8 @@
 {
-    "version":  "1.1.6",
-    "url":  "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/launcher-1.1.6/DeluxeWarfareLauncher-Setup-1.1.6.exe",
-    "sha256":  "77dae7a5ed2e5a1be7e676ae8e18e33c89a2abf5cfc9678c2be54b0a980ac221",
-    "size":  44764297,
+    "version":  "1.1.7",
+    "url":  "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/launcher-1.1.7/DeluxeWarfareLauncher-Setup-1.1.7.exe",
+    "sha256":  "b0e3f0b757eeae2d7e637149e9e09997f7f9b9d70b704abcad3dbfef5854ca56",
+    "size":  44457699,
     "mandatory":  true,
-    "notes":  "Required launcher update: supports optional allowed mods from launcher_manifest.json without auto-installing them."
+    "notes":  "Required launcher update: supports optional allowed directories for Connector runtime/cache files used by Replay Mod."
 }
