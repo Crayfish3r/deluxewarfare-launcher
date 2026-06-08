@@ -173,7 +173,20 @@
       "required": true
     }
   ],
-  "optionalAllowedFiles": [],
+  "optionalAllowedFiles": [
+    {
+      "path": "mods/entityculling-forge-1.10.2-mc1.20.1.jar",
+      "sha256": "34da8e10cf31ade2b86b02e4f55c4d3b480a0992148ac12f9ec49eb7be4bfda0",
+      "size": 1587585,
+      "required": false
+    },
+    {
+      "path": "mods/replaymod-1.20.1-2.6.13.jar",
+      "sha256": "337bcd3baac269ba2a408dbd547fe3ea10f316e9cfc9d70e46c08fc09f3424d7",
+      "size": 13075030,
+      "required": false
+    }
+  ],
   "optionalAllowedDirectories": [
     {
       "path": "mods/.connector/",
