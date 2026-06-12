@@ -54,6 +54,13 @@
       "required": true
     },
     {
+      "path": "mods/entityculling-forge-1.10.2-mc1.20.1.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__entityculling-forge-1.10.2-mc1.20.1.jar",
+      "sha256": "34da8e10cf31ade2b86b02e4f55c4d3b480a0992148ac12f9ec49eb7be4bfda0",
+      "size": 1587585,
+      "required": true
+    },
+    {
       "path": "mods/fabric-api-0.92.6+1.11.14+1.20.1.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__fabric-api-0.92.6_1.11.14_1.20.1.jar",
       "sha256": "9b140af437581d32e5ee17d20f8fe882000e6a34cba85c152ae5bccc9570cc03",
@@ -133,8 +140,8 @@
     {
       "path": "mods/TacticalTablet-fix-0.1.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__TacticalTablet-fix-0.1.jar",
-      "sha256": "76fcd9d00491c7104af18fcc0a67c02bc69145c3d7fd724cfbc6d3fa410fb4cb",
-      "size": 835033,
+      "sha256": "83334bdcf02ec7c6688b1c7a0bdc85e6ea85281795c67e62bed344971e9204c3",
+      "size": 835484,
       "required": true
     },
     {
@@ -206,6 +213,7 @@
     "CreativeCore_FORGE_v2.12.35_mc1.20.1.jar",
     "curios-forge-5.14.1+1.20.1.jar",
     "embeddium-0.3.31mc1.20.1.jar",
+    "entityculling-forge-1.10.2-mc1.20.1.jar",
     "fabric-api-0.92.6+1.11.14+1.20.1.jar",
     "forge_auth_mod-0.2.0.jar",
     "fracturepoint-1.20.1-2.3.11-beta-all.jar",
