@@ -5,6 +5,13 @@
   "requiredJava": 17,
   "files": [
     {
+      "path": "mods/apocalypticarsenal-1.0.1.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__apocalypticarsenal-1.0.1.jar",
+      "sha256": "e0fb932ad060e43b62da7cbbda0d31affadff00e7466bf1b7a0405e3f7bc39df",
+      "size": 3080423,
+      "required": true
+    },
+    {
       "path": "mods/CameraOverhaul-v2.1.1-forge+mc[1.20-1.20.5].jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__CameraOverhaul-v2.1.1-forge_mc_1.20-1.20.5_.jar",
       "sha256": "af4f381a19c7ce39e019025955c2a9767b8b5c0d8b826d2975e60d9da466e492",
@@ -140,8 +147,15 @@
     {
       "path": "mods/TacticalTablet-fix-0.1.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__TacticalTablet-fix-0.1.jar",
-      "sha256": "83334bdcf02ec7c6688b1c7a0bdc85e6ea85281795c67e62bed344971e9204c3",
-      "size": 835484,
+      "sha256": "127877b0b76ac04cd02a8a5cbdf08f7aaf08957294f3a5da3127ce910df7e378",
+      "size": 835642,
+      "required": true
+    },
+    {
+      "path": "mods/tacz_presence-1.4.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__tacz_presence-1.4.jar",
+      "sha256": "2384bb4b3df41999c586aaf0d35ea33c477fad6a520985e78ba99d735823dea4",
+      "size": 3866215,
       "required": true
     },
     {
@@ -206,6 +220,7 @@
   ],
   "deleteUnknownMods": true,
   "allowedMods": [
+    "apocalypticarsenal-1.0.1.jar",
     "CameraOverhaul-v2.1.1-forge+mc[1.20-1.20.5].jar",
     "cloth-config-11.1.136-forge.jar",
     "Connector-1.0.0-beta.48-1.20.1.jar",
@@ -226,6 +241,7 @@
     "player-animation-lib-forge-1.0.2-rc1+1.20.jar",
     "superbwarfare-0.8.9-final-mc1.20.1-6effe4385-all.jar",
     "TacticalTablet-fix-0.1.jar",
+    "tacz_presence-1.4.jar",
     "tacz-1.20.1-1.1.8-hotfix.jar",
     "tacz-tweaks-2.14.0-all.jar",
     "taczleaning-1.0.jar",
