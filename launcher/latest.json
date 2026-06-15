@@ -1,8 +1,8 @@
 {
-    "version":  "1.1.7",
-    "url":  "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/launcher-1.1.7/DeluxeWarfareLauncher-Setup-1.1.7.exe",
-    "sha256":  "b0e3f0b757eeae2d7e637149e9e09997f7f9b9d70b704abcad3dbfef5854ca56",
-    "size":  44457699,
+    "version":  "1.1.8",
+    "url":  "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/launcher-1.1.8/DeluxeWarfareLauncher-Setup-1.1.8.exe",
+    "sha256":  "becbcee6636ab55f31ab27b0505ae7eb93c7f801acb5aa0ef85368c9950d650d",
+    "size":  44786108,
     "mandatory":  true,
-    "notes":  "Required launcher update: supports optional allowed directories for Connector runtime/cache files used by Replay Mod."
+    "notes":  "UX update: determinate progress bar, golden donation button, and saved Deluxe Warfare server entry."
 }
