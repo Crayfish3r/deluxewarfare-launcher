@@ -110,6 +110,13 @@
       "required": true
     },
     {
+      "path": "mods/military_equipment-3.0.2-forge-1.20.1.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__military_equipment-3.0.2-forge-1.20.1.jar",
+      "sha256": "123721507432155e1028fc72656d8035f33c99aaa0dab0f64951c6a7823e2dab",
+      "size": 3983710,
+      "required": true
+    },
+    {
       "path": "mods/ParCool-1.20.1-3.4.3.3.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__ParCool-1.20.1-3.4.3.3.jar",
       "sha256": "2ddef8752b5a1428035b95f29e62c81e33b80d37851681e1b928d8a01615c6e7",
@@ -138,6 +145,13 @@
       "required": true
     },
     {
+      "path": "mods/sbw_more_drone_detector-2.0.2-forge-1.20.1.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__sbw_more_drone_detector-2.0.2-forge-1.20.1.jar",
+      "sha256": "4e96a9196b054714f398336a4cd313a92403e5339010ae82595e5f6a5af5323a",
+      "size": 4711342,
+      "required": true
+    },
+    {
       "path": "mods/superbwarfare-0.8.9-final-mc1.20.1-6effe4385-all.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__superbwarfare-0.8.9-final-mc1.20.1-6effe4385-all.jar",
       "sha256": "6eece0df9c927bddee3bd373fe90a2bbcba7157e9408ee0f94d13e04dc638395",
@@ -147,8 +161,8 @@
     {
       "path": "mods/TacticalTablet-fix-0.1.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__TacticalTablet-fix-0.1.jar",
-      "sha256": "8414825da2953d5ce2443ca41b63476372d86b6a033c46e9990f5b62d03feb75",
-      "size": 880168,
+      "sha256": "0783d98a2ec107e8251b943b7c097a04d0788d4d543482bda8852f144671624c",
+      "size": 887572,
       "required": true
     },
     {
@@ -235,10 +249,12 @@
     "geckolib-forge-1.20.1-4.7.jar",
     "kotlinforforge-4.12.0-all.jar",
     "lrtactical-1.20.1-0.4.1.jar",
+    "military_equipment-3.0.2-forge-1.20.1.jar",
     "ParCool-1.20.1-3.4.3.3.jar",
     "ParCool-CompatibilityAddon-1.20.1-3.4.1.5-1.1.jar",
     "Patchouli-1.20.1-85-FORGE.jar",
     "player-animation-lib-forge-1.0.2-rc1+1.20.jar",
+    "sbw_more_drone_detector-2.0.2-forge-1.20.1.jar",
     "superbwarfare-0.8.9-final-mc1.20.1-6effe4385-all.jar",
     "TacticalTablet-fix-0.1.jar",
     "tacz_presence-1.4.jar",
