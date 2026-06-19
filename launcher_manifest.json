@@ -216,9 +216,9 @@
       "required": false
     },
     {
-      "path": "mods/replaymod-1.20.1-2.6.13.jar",
-      "sha256": "337bcd3baac269ba2a408dbd547fe3ea10f316e9cfc9d70e46c08fc09f3424d7",
-      "size": 13075030,
+      "path": "mods/replaymod-1.20.1-2.6.23.jar",
+      "sha256": "a46491d73456187ac888d31f6cc1160e42304427a63da88874c84abeb4d14033",
+      "size": 14739015,
       "required": false
     }
   ],
