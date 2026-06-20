@@ -159,10 +159,17 @@
       "required": true
     },
     {
+      "path": "mods/tactical_jammer.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__tactical_jammer.jar",
+      "sha256": "b61204494d267b20e5e753de979cf9ba1092077785db10f426e29d8d49cb6fc9",
+      "size": 26902,
+      "required": true
+    },
+    {
       "path": "mods/TacticalTablet-fix-0.1.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__TacticalTablet-fix-0.1.jar",
-      "sha256": "0783d98a2ec107e8251b943b7c097a04d0788d4d543482bda8852f144671624c",
-      "size": 887572,
+      "sha256": "4585320a05c9f2649e110bc9056c7c51caf6da46df26fa1866dbd5650d184770",
+      "size": 892626,
       "required": true
     },
     {
@@ -216,9 +223,9 @@
       "required": false
     },
     {
-      "path": "mods/replaymod-1.20.1-2.6.23.jar",
-      "sha256": "a46491d73456187ac888d31f6cc1160e42304427a63da88874c84abeb4d14033",
-      "size": 14739015,
+      "path": "mods/replaymod-1.20.1-2.6.13.jar",
+      "sha256": "337bcd3baac269ba2a408dbd547fe3ea10f316e9cfc9d70e46c08fc09f3424d7",
+      "size": 13075030,
       "required": false
     }
   ],
@@ -256,6 +263,7 @@
     "player-animation-lib-forge-1.0.2-rc1+1.20.jar",
     "sbw_more_drone_detector-2.0.2-forge-1.20.1.jar",
     "superbwarfare-0.8.9-final-mc1.20.1-6effe4385-all.jar",
+    "tactical_jammer.jar",
     "TacticalTablet-fix-0.1.jar",
     "tacz_presence-1.4.jar",
     "tacz-1.20.1-1.1.8-hotfix.jar",
