@@ -154,8 +154,8 @@
     {
       "path": "mods/tactical_jammer.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__tactical_jammer.jar",
-      "sha256": "b61204494d267b20e5e753de979cf9ba1092077785db10f426e29d8d49cb6fc9",
-      "size": 26902,
+      "sha256": "08087b6dd7a52560c7f517237465003da15c34eff96e7503da0fead538678e59",
+      "size": 38844,
       "required": true
     },
     {
