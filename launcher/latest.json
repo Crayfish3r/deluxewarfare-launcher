@@ -1,8 +1,8 @@
 {
-    "version":  "1.1.8",
-    "url":  "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/launcher-1.1.8/DeluxeWarfareLauncher-Setup-1.1.8.exe",
-    "sha256":  "becbcee6636ab55f31ab27b0505ae7eb93c7f801acb5aa0ef85368c9950d650d",
-    "size":  44786108,
+    "version":  "1.1.9",
+    "url":  "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/launcher-1.1.9/DeluxeWarfareLauncher-Setup-1.1.9.exe",
+    "sha256":  "6549b7f6d7a32ae28f5e61151476304dc208bafdea2fde16d9d5ff27035f5a36",
+    "size":  44608010,
     "mandatory":  true,
-    "notes":  "UX update: determinate progress bar, golden donation button, and saved Deluxe Warfare server entry."
+    "notes":  "Launcher 1.1.9: updated launcher background."
 }
