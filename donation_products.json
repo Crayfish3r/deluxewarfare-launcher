@@ -1,37 +1,7 @@
 [
   {
-    "id": "STARTER_PACK_14D",
-    "code": "D001",
-    "title": "StarterPack",
-    "price": 149,
-    "currency": "RUB",
-    "description": "На 14 дней дает небольшой общий прирост ко всем наградам в игре +20%, а также epic уровень на классы Снайпер, Штурмовик и Разведчик.",
-    "rewardType": "STARTER_PACK",
-    "enabled": true
-  },
-  {
-    "id": "LIFETIME_XP_COINS_BOOST_25",
-    "code": "D002",
-    "title": "XP/coin boost",
-    "price": 499,
-    "currency": "RUB",
-    "description": "Пожизненный временный прирост всех наград XP/Coins на 25%.",
-    "rewardType": "PERSONAL_PROGRESS_BOOST",
-    "enabled": true
-  },
-  {
-    "id": "FARM_XP_CLASS",
-    "code": "D003",
-    "title": "Эксклюзивный класс для фарма опыта",
-    "price": 349,
-    "currency": "RUB",
-    "description": "Пока в разработке. Играя за этот класс, вы получаете XP на все ваши классы, которые способны прокачиваться.",
-    "rewardType": "CLASS_UNLOCK",
-    "enabled": true
-  },
-  {
     "id": "COINS_50",
-    "code": "D004",
+    "code": "D001",
     "title": "Просто кучка монет",
     "price": 49,
     "currency": "RUB",
