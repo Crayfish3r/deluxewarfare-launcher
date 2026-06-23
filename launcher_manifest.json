@@ -201,6 +201,13 @@
       "required": true
     },
     {
+      "path": "mods/voicechat-forge-1.20.1-2.6.20.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__voicechat-forge-1.20.1-2.6.20.jar",
+      "sha256": "6229285ebbd98bf62568387daa999a241cc9f2418b16ece641d238a9efcae4fb",
+      "size": 4911858,
+      "required": true
+    },
+    {
       "path": "mods/yet_another_config_lib_v3-3.6.6+1.20.1-forge.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__yet_another_config_lib_v3-3.6.6_1.20.1-forge.jar",
       "sha256": "bd05da3d9df29b914165583f1c6dfd918a138996447ff32c0418329824027a8f",
@@ -262,6 +269,7 @@
     "tacz-tweaks-2.14.0-all.jar",
     "taczleaning-1.0.jar",
     "thermal_vision_v3-fixed.jar",
+    "voicechat-forge-1.20.1-2.6.20.jar",
     "yet_another_config_lib_v3-3.6.6+1.20.1-forge.jar"
   ]
 }
