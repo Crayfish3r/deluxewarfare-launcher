@@ -75,10 +75,10 @@
       "required": true
     },
     {
-      "path": "mods/forge_auth_mod-0.2.0.jar",
-      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__forge_auth_mod-0.2.0.jar",
-      "sha256": "68779d18900561c6d5263a1d22e5859859a5401914fab1381fa2a080156cb203",
-      "size": 20567,
+      "path": "mods/forge_auth_mod-0.3.0.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__forge_auth_mod-0.3.0.jar",
+      "sha256": "ac9357b422006d73600af06005f3cf3fa6123a6bd12beea1d40951a0bc2bfe5c",
+      "size": 25859,
       "required": true
     },
     {
@@ -251,7 +251,7 @@
     "embeddium-0.3.31mc1.20.1.jar",
     "entityculling-forge-1.10.2-mc1.20.1.jar",
     "fabric-api-0.92.6+1.11.14+1.20.1.jar",
-    "forge_auth_mod-0.2.0.jar",
+    "forge_auth_mod-0.3.0.jar",
     "fracturepoint-1.20.1-2.3.11-beta-all.jar",
     "geckolib-forge-1.20.1-4.7.jar",
     "kotlinforforge-4.12.0-all.jar",
