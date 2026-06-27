@@ -12,6 +12,13 @@
       "required": true
     },
     {
+      "path": "mods/Arcana-1.1.4-loader-hybrid.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__Arcana-1.1.4-loader-hybrid.jar",
+      "sha256": "b0a9ba0cc00de886a0b7162dff5073b9255910e951b5f5a2655c01490eee7dfa",
+      "size": 7826332,
+      "required": true
+    },
+    {
       "path": "mods/CameraOverhaul-v2.1.1-forge+mc[1.20-1.20.5].jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__CameraOverhaul-v2.1.1-forge_mc_1.20-1.20.5_.jar",
       "sha256": "af4f381a19c7ce39e019025955c2a9767b8b5c0d8b826d2975e60d9da466e492",
@@ -161,8 +168,8 @@
     {
       "path": "mods/TacticalTablet-fix-0.1.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__TacticalTablet-fix-0.1.jar",
-      "sha256": "8575782d0f0af2f6c80e3aede93d532dea9286a31269c1cf50233c1839d7ae67",
-      "size": 1161435,
+      "sha256": "0046fc1903ecdbc4fbc49b8ef519667b23ac49848ff162668593ae0c9a5c4ab8",
+      "size": 1377948,
       "required": true
     },
     {
@@ -242,6 +249,7 @@
   "deleteUnknownMods": true,
   "allowedMods": [
     "apocalypticarsenal-1.0.1.jar",
+    "Arcana-1.1.4-loader-hybrid.jar",
     "CameraOverhaul-v2.1.1-forge+mc[1.20-1.20.5].jar",
     "cloth-config-11.1.136-forge.jar",
     "Connector-1.0.0-beta.48-1.20.1.jar",
