@@ -168,8 +168,8 @@
     {
       "path": "mods/TacticalTablet-fix-0.1.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__TacticalTablet-fix-0.1.jar",
-      "sha256": "0046fc1903ecdbc4fbc49b8ef519667b23ac49848ff162668593ae0c9a5c4ab8",
-      "size": 1377948,
+      "sha256": "7ce8adf3ab9d5e9d1b44bd2602e46642c311e9bf97a302f365c228bde16d9c29",
+      "size": 1389423,
       "required": true
     },
     {
