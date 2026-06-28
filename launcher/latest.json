@@ -1,8 +1,8 @@
 {
-    "version":  "1.1.9",
-    "url":  "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/launcher-1.1.9/DeluxeWarfareLauncher-Setup-1.1.9.exe",
-    "sha256":  "6549b7f6d7a32ae28f5e61151476304dc208bafdea2fde16d9d5ff27035f5a36",
-    "size":  44608010,
+    "version":  "1.10",
+    "url":  "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/launcher-1.10/DeluxeWarfareLauncher-Setup-1.10.exe",
+    "sha256":  "3f48737a1a74c009a13b2551e220df2de5c010270520fa922df95994c3b9e769",
+    "size":  44631534,
     "mandatory":  true,
-    "notes":  "Launcher 1.1.9: updated launcher background."
+    "notes":  "Launcher 1.10: settings button for Minecraft RAM, EasyDonate shop link, updated launcher background."
 }
