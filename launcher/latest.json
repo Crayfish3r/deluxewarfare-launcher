@@ -1,8 +1,8 @@
 {
-    "version":  "1.11",
-    "url":  "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/launcher-1.11/DeluxeWarfareLauncher-Setup-1.11.exe",
-    "sha256":  "862e50d7d11a81ede83ab29f1093f9172bbb510b05552ee9d3fb9fea99ec73e4",
-    "size":  44633296,
+    "version":  "1.12",
+    "url":  "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/launcher-1.12/DeluxeWarfareLauncher-Setup-1.12.exe",
+    "sha256":  "dd035cfcc095001026ca37c6b49ec3e445b681c5fa825dcb945220e22529c71e",
+    "size":  44634932,
     "mandatory":  true,
-    "notes":  "Launcher 1.11: automatically repairs incomplete Forge installations when generated Forge libraries are missing."
+    "notes":  "Launcher 1.12: fixes Forge repair path check and suppresses verbose Forge installer class listing in launcher logs."
 }
