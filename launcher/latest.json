@@ -1,8 +1,8 @@
 {
-    "version":  "1.10",
-    "url":  "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/launcher-1.10/DeluxeWarfareLauncher-Setup-1.10.exe",
-    "sha256":  "3f48737a1a74c009a13b2551e220df2de5c010270520fa922df95994c3b9e769",
-    "size":  44631534,
+    "version":  "1.11",
+    "url":  "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/launcher-1.11/DeluxeWarfareLauncher-Setup-1.11.exe",
+    "sha256":  "862e50d7d11a81ede83ab29f1093f9172bbb510b05552ee9d3fb9fea99ec73e4",
+    "size":  44633296,
     "mandatory":  true,
-    "notes":  "Launcher 1.10: settings button for Minecraft RAM, EasyDonate shop link, updated launcher background."
+    "notes":  "Launcher 1.11: automatically repairs incomplete Forge installations when generated Forge libraries are missing."
 }
