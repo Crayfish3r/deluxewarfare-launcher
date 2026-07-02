@@ -168,8 +168,8 @@
     {
       "path": "mods/TacticalTablet-fix-0.1.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__TacticalTablet-fix-0.1.jar",
-      "sha256": "8ac7cc40ad47599f71b07e1363630cdac0b3bddee729a42b48e47090045895ad",
-      "size": 1392341,
+      "sha256": "db81a29c17d962b66484e1ada38568bce0cce5eedefc25226455d06763f4619b",
+      "size": 1401279,
       "required": true
     },
     {
@@ -3160,10 +3160,6 @@
     {
       "path": "tacz/tacz_default_gun/",
       "reason": "Default TaCZ gun pack is installed automatically by the TaCZ mod"
-    }
-    {
-      "path": "tacz/ChaosCraft's Apocalyptic Arsenal/",
-      "reason": "Runtime/exported TaCZ gunpack from apocalypticarsenal-1.0.1.jar"
     }
   ],
   "deleteUnknownMods": true,
