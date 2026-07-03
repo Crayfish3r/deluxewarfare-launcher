@@ -161,15 +161,15 @@
     {
       "path": "mods/tactical_jammer.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__tactical_jammer.jar",
-      "sha256": "08087b6dd7a52560c7f517237465003da15c34eff96e7503da0fead538678e59",
-      "size": 38844,
+      "sha256": "0b6d7e7eecab57365a1a67c541c61df582a4cd59a8b60eecae6dd55afece6497",
+      "size": 39107,
       "required": true
     },
     {
       "path": "mods/TacticalTablet-fix-0.1.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__TacticalTablet-fix-0.1.jar",
-      "sha256": "4f0c56f24381d574496522396fcd5689ae567b599d583481b74929f932d9c88f",
-      "size": 1401322,
+      "sha256": "e4ef874a60e8153ec5b2bccece7090fb6d31204f31045ef354aae53e77678895",
+      "size": 1445980,
       "required": true
     },
     {
@@ -191,13 +191,6 @@
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__tacz-tweaks-2.14.0-all.jar",
       "sha256": "6f6dcba40380b7648c45c9fe15d27e2d03189b6c9cd3574d60b866f0a36c627d",
       "size": 1930913,
-      "required": true
-    },
-    {
-      "path": "mods/taczleaning-1.0.jar",
-      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__taczleaning-1.0.jar",
-      "sha256": "457ea127a154a5e4d14692920783a3604ba90433c689cc7480ad4c1314499ff0",
-      "size": 11503,
       "required": true
     },
     {
@@ -3160,6 +3153,10 @@
     {
       "path": "tacz/tacz_default_gun/",
       "reason": "Default TaCZ gun pack is installed automatically by the TaCZ mod"
+    },
+    {
+      "path": "tacz/ChaosCraft's Apocalyptic Arsenal/",
+      "reason": "Runtime/exported TaCZ gunpack from apocalypticarsenal-1.0.1.jar"
     }
   ],
   "deleteUnknownMods": true,
@@ -3191,7 +3188,6 @@
     "tacz_presence-1.4.jar",
     "tacz-1.20.1-1.1.8-hotfix.jar",
     "tacz-tweaks-2.14.0-all.jar",
-    "taczleaning-1.0.jar",
     "thermal_vision_v3-fixed.jar",
     "voicechat-forge-1.20.1-2.6.20.jar",
     "yet_another_config_lib_v3-3.6.6+1.20.1-forge.jar"
