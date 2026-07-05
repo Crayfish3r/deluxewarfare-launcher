@@ -1,8 +1,8 @@
 {
-    "version":  "1.12",
-    "url":  "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/launcher-1.12/DeluxeWarfareLauncher-Setup-1.12.exe",
-    "sha256":  "dd035cfcc095001026ca37c6b49ec3e445b681c5fa825dcb945220e22529c71e",
-    "size":  44634932,
+    "version":  "2.0.0",
+    "url":  "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/launcher-2.0.0/DeluxeWarfareLauncher-Setup-2.0.0.exe",
+    "sha256":  "43e3d4f301a8b5784ef162bf030ae82f4b9c6444dbb0a4233dd312fa9780dba7",
+    "size":  44920856,
     "mandatory":  true,
-    "notes":  "Launcher 1.12: fixes Forge repair path check and suppresses verbose Forge installer class listing in launcher logs."
+    "notes":  "Launcher 2.0.0: updated launcher release."
 }
