@@ -159,10 +159,10 @@
       "required": true
     },
     {
-      "path": "mods/TacticalTablet-fix-0.1.jar",
-      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__TacticalTablet-fix-0.1.jar",
-      "sha256": "c43b67fe75639e817b504e7e8f1ad1e9f563371911032adeceeaabb55243f199",
-      "size": 1461314,
+      "path": "mods/tacticaltablet-1.0.0.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__tacticaltablet-1.0.0.jar",
+      "sha256": "1923a4d0714514dc599f6441a1019d85a7cbd0c950f3d63ccb21a2f5955a051a",
+      "size": 1661858,
       "required": true
     },
     {
@@ -299,7 +299,7 @@
     "player-animation-lib-forge-1.0.2-rc1+1.20.jar",
     "superbwarfare-0.8.9-final-mc1.20.1-6effe4385-all.jar",
     "tactical_jammer.jar",
-    "TacticalTablet-fix-0.1.jar",
+    "tacticaltablet-1.0.0.jar",
     "tacz_presence-1.4.jar",
     "tacz-1.20.1-1.1.8-hotfix.jar",
     "tacz-firstaid-compat-1.0.0.jar",
