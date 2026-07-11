@@ -1,8 +1,8 @@
 {
-    "version":  "2.0.0",
-    "url":  "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/launcher-2.0.0/DeluxeWarfareLauncher-Setup-2.0.0.exe",
-    "sha256":  "43e3d4f301a8b5784ef162bf030ae82f4b9c6444dbb0a4233dd312fa9780dba7",
-    "size":  44920856,
+    "version":  "2.0.1",
+    "url":  "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/launcher-2.0.1/DeluxeWarfareLauncher-Setup-2.0.1.exe",
+    "sha256":  "7bbf48eb2df2c696404926c3f72f18047b57a05ee0cdc880c40482c50a456af1",
+    "size":  44921279,
     "mandatory":  true,
-    "notes":  "Launcher 2.0.0: updated launcher release."
+    "notes":  "Launcher 2.0.1: backend auth moved to auth.deluxe-warfare.ru."
 }
