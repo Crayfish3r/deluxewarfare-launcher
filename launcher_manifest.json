@@ -138,6 +138,13 @@
       "required": true
     },
     {
+      "path": "mods/Ping-Wheel-1.12.1-forge-1.20.1.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__Ping-Wheel-1.12.1-forge-1.20.1.jar",
+      "sha256": "71692ad5d2b410ebcfbe3bb6bdf151c40ea75d012c75aff3c6c1a37abf9e8057",
+      "size": 157314,
+      "required": true
+    },
+    {
       "path": "mods/player-animation-lib-forge-1.0.2-rc1+1.20.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__player-animation-lib-forge-1.0.2-rc1_1.20.jar",
       "sha256": "90d9965cb9efdbda29fdc5610be3914cf7008bf5c392ff34f7ab25f96a852691",
@@ -161,8 +168,8 @@
     {
       "path": "mods/tacticaltablet-1.0.0.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__tacticaltablet-1.0.0.jar",
-      "sha256": "1923a4d0714514dc599f6441a1019d85a7cbd0c950f3d63ccb21a2f5955a051a",
-      "size": 1661858,
+      "sha256": "def8e42b4137372b77df62c08b7b205b2b9a60c29c5dd99acd4edd0902d15029",
+      "size": 1669578,
       "required": true
     },
     {
@@ -296,6 +303,7 @@
     "ParCool-1.20.1-3.4.3.3.jar",
     "ParCool-CompatibilityAddon-1.20.1-3.4.1.5-1.1.jar",
     "Patchouli-1.20.1-85-FORGE.jar",
+    "Ping-Wheel-1.12.1-forge-1.20.1.jar",
     "player-animation-lib-forge-1.0.2-rc1+1.20.jar",
     "superbwarfare-0.8.9-final-mc1.20.1-6effe4385-all.jar",
     "tactical_jammer.jar",
