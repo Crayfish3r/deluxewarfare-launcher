@@ -168,8 +168,8 @@
     {
       "path": "mods/tacticaltablet-1.0.0.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__tacticaltablet-1.0.0.jar",
-      "sha256": "def8e42b4137372b77df62c08b7b205b2b9a60c29c5dd99acd4edd0902d15029",
-      "size": 1669578,
+      "sha256": "c784af712c6c819e074d0522f46721fec3881d84b01c8787651d9454f05533e7",
+      "size": 1781022,
       "required": true
     },
     {
@@ -233,6 +233,13 @@
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/tacz__.export-state.json",
       "sha256": "6a822997561a49310a36e886c57e52076e8e8e8520f3cce8a0e3933b89bdf677",
       "size": 155,
+      "required": true
+    },
+    {
+      "path": "tacz/ARIPS_ver.1.3.0.zip",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/tacz__ARIPS_ver.1.3.0.zip",
+      "sha256": "5bc39b5709e405e277e3488fb2c9bb34f79061b5c4206b6df2fd62bd95b129f3",
+      "size": 3277563,
       "required": true
     },
     {
