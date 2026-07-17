@@ -288,6 +288,10 @@
     {
       "path": "tacz/ChaosCraft's Apocalyptic Arsenal/",
       "reason": "Runtime/exported TaCZ gunpack from apocalypticarsenal-1.0.1.jar"
+    },
+    {
+      "path":"tacz/immersive_ballistic/",
+      "reason": "Runtime/exported TacZ gunpack from immersive_ballistic"
     }
   ],
   "deleteUnknownMods": true,
