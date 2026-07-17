@@ -1,0 +1,13 @@
+# Local secrets
+**/.env
+**/.dev.vars
+
+# Dependencies and generated output
+**/node_modules/
+**/build/
+**/build-output/
+**/installer-output/
+**/.gradle/
+
+# Modpack binaries are published as release assets, not committed.
+distribution/files/**/*.jar
