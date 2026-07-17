@@ -166,6 +166,13 @@
       "required": true
     },
     {
+      "path": "mods/superbwarfaredronehud-1.0-R.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__superbwarfaredronehud-1.0-R.jar",
+      "sha256": "33b9320898823c45e75dbc1ea00a0dda999cde3961bbd137d025763a22d20627",
+      "size": 1975055,
+      "required": true
+    },
+    {
       "path": "mods/tactical_jammer.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__tactical_jammer.jar",
       "sha256": "0b6d7e7eecab57365a1a67c541c61df582a4cd59a8b60eecae6dd55afece6497",
@@ -288,10 +295,6 @@
     {
       "path": "tacz/ChaosCraft's Apocalyptic Arsenal/",
       "reason": "Runtime/exported TaCZ gunpack from apocalypticarsenal-1.0.1.jar"
-    },
-    {
-      "path":"tacz/immersive_ballistic/",
-      "reason": "Runtime/exported TacZ gunpack from immersive_ballistic"
     }
   ],
   "deleteUnknownMods": true,
@@ -319,6 +322,7 @@
     "Ping-Wheel-1.12.1-forge-1.20.1.jar",
     "player-animation-lib-forge-1.0.2-rc1+1.20.jar",
     "superbwarfare-0.8.9-final-mc1.20.1-6effe4385-all.jar",
+    "superbwarfaredronehud-1.0-R.jar",
     "tactical_jammer.jar",
     "tacticaltablet-1.0.0.jar",
     "tacz_presence-1.4.jar",
