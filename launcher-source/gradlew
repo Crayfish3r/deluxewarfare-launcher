@@ -1,0 +1,29 @@
+#!/usr/bin/env sh
+
+set -e
+
+APP_HOME=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+GRADLE_VERSION=8.10.2
+GRADLE_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/tactical-launcher-gradle-cache"
+GRADLE_HOME="$GRADLE_CACHE/gradle-$GRADLE_VERSION"
+GRADLE_ZIP="$GRADLE_CACHE/gradle-$GRADLE_VERSION-bin.zip"
+GRADLE_URL="https://services.gradle.org/distributions/gradle-$GRADLE_VERSION-bin.zip"
+
+if [ ! -x "$GRADLE_HOME/bin/gradle" ]; then
+  mkdir -p "$GRADLE_CACHE"
+
+  if [ ! -f "$GRADLE_ZIP" ]; then
+    if command -v curl >/dev/null 2>&1; then
+      curl -L "$GRADLE_URL" -o "$GRADLE_ZIP"
+    elif command -v wget >/dev/null 2>&1; then
+      wget "$GRADLE_URL" -O "$GRADLE_ZIP"
+    else
+      echo "curl or wget is required to download Gradle." >&2
+      exit 1
+    fi
+  fi
+
+  unzip -q "$GRADLE_ZIP" -d "$GRADLE_CACHE"
+fi
+
+exec "$GRADLE_HOME/bin/gradle" --project-cache-dir "$GRADLE_CACHE/project-cache" "$@"

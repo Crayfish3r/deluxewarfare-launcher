@@ -1,0 +1,361 @@
+.root {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 12px;
+    -fx-text-fill: #eef1f5;
+}
+
+.background-root {
+    -fx-background-color: #ffffff;
+}
+
+.side-panel {
+    -fx-padding: 30px 24px 22px 24px;
+    -fx-background-color: rgba(8, 12, 18, 0.94);
+    -fx-border-color: rgba(255, 255, 255, 0.08);
+    -fx-border-width: 0 1px 0 0;
+    -fx-effect: innershadow(gaussian, rgba(255, 255, 255, 0.05), 20, 0.15, 1, 0);
+}
+
+.section-title {
+    -fx-text-fill: #d9dde5;
+    -fx-font-size: 12px;
+    -fx-font-weight: 800;
+    -fx-letter-spacing: 0;
+}
+
+.launcher-brand-title {
+    -fx-font-family: "Arial Black", "Segoe UI Black", "Segoe UI";
+    -fx-font-size: 34px;
+    -fx-font-weight: 900;
+    -fx-text-fill: #f2e9e6;
+    -fx-effect: dropshadow(gaussian, rgba(115, 12, 18, 0.82), 12, 0.28, 0, 3);
+}
+
+.input-field {
+    -fx-background-color: rgba(3, 6, 10, 0.86);
+    -fx-text-fill: #f3f5f8;
+    -fx-prompt-text-fill: #777f8b;
+    -fx-border-color: rgba(170, 178, 190, 0.35);
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 0 12px;
+    -fx-font-size: 13px;
+}
+
+.input-field:focused {
+    -fx-border-color: rgba(230, 88, 82, 0.78);
+    -fx-effect: dropshadow(gaussian, rgba(185, 35, 35, 0.34), 10, 0.22, 0, 0);
+}
+
+.discord-code-input {
+    -fx-font-family: "Consolas", "JetBrains Mono", monospace;
+}
+
+.discord-button,
+.utility-button,
+.logs-button,
+.overlay-close-button {
+    -fx-cursor: hand;
+}
+
+.discord-button {
+    -fx-background-color: linear-gradient(to bottom, #313843, #171d25);
+    -fx-text-fill: #eef2f7;
+    -fx-border-color: rgba(139, 150, 166, 0.46);
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-font-size: 12px;
+    -fx-font-weight: 800;
+}
+
+.discord-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #414a56, #212833);
+    -fx-border-color: rgba(197, 207, 222, 0.62);
+}
+
+.discord-button:disabled {
+    -fx-opacity: 1;
+    -fx-background-color: #252a31;
+    -fx-text-fill: #808894;
+}
+
+.discord-status-row {
+    -fx-min-height: 38px;
+}
+
+.discord-status-badge {
+    -fx-background-radius: 50%;
+    -fx-border-radius: 50%;
+    -fx-border-width: 1px;
+}
+
+.discord-status-ok {
+    -fx-background-color: #29b865;
+    -fx-border-color: rgba(180, 255, 209, 0.62);
+    -fx-effect: dropshadow(gaussian, rgba(41, 184, 101, 0.58), 8, 0.25, 0, 0);
+}
+
+.discord-status-fail {
+    -fx-background-color: #8d3338;
+    -fx-border-color: rgba(255, 150, 156, 0.42);
+}
+
+.discord-user-label {
+    -fx-text-fill: #aeb6c4;
+    -fx-font-size: 11px;
+    -fx-line-spacing: 2px;
+}
+
+.play-button {
+    -fx-background-color: linear-gradient(to bottom, #c83a3a, #7f171b);
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: rgba(255, 130, 130, 0.55);
+    -fx-border-width: 1px;
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Black", "Segoe UI Black", "Segoe UI";
+    -fx-font-size: 25px;
+    -fx-font-weight: 900;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(155, 20, 24, 0.56), 16, 0.36, 0, 3);
+}
+
+.play-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #dc4a48, #951f24);
+    -fx-border-color: rgba(255, 170, 170, 0.72);
+}
+
+.play-button:pressed {
+    -fx-background-color: linear-gradient(to bottom, #8b1d22, #c83a3a);
+}
+
+.play-button:disabled {
+    -fx-opacity: 1;
+    -fx-background-color: linear-gradient(to bottom, #41474f, #252a31);
+    -fx-border-color: rgba(150, 158, 170, 0.28);
+    -fx-text-fill: #a0a7b1;
+    -fx-effect: none;
+}
+
+.utility-button {
+    -fx-background-color: rgba(20, 25, 32, 0.92);
+    -fx-text-fill: #d7dce4;
+    -fx-border-color: rgba(156, 166, 181, 0.32);
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-font-size: 11px;
+    -fx-font-weight: 800;
+}
+
+.utility-button:hover {
+    -fx-background-color: rgba(39, 47, 58, 0.96);
+    -fx-border-color: rgba(200, 210, 225, 0.48);
+}
+
+.utility-button:pressed {
+    -fx-background-color: rgba(12, 15, 20, 0.96);
+}
+
+.utility-button:disabled {
+    -fx-opacity: 1;
+    -fx-text-fill: #77808d;
+    -fx-background-color: rgba(27, 31, 37, 0.76);
+}
+
+.update-button {
+    -fx-text-fill: #dfe5ee;
+}
+
+.donation-button {
+    -fx-background-color: linear-gradient(to bottom, #f4c65a, #b5771e);
+    -fx-text-fill: #1b1204;
+    -fx-border-color: rgba(255, 231, 163, 0.75);
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-font-weight: 900;
+}
+
+.donation-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #ffdb7c, #d08c25);
+}
+
+.donation-button:pressed {
+    -fx-background-color: linear-gradient(to bottom, #9d6417, #e6aa39);
+}
+
+.settings-button {
+    -fx-font-size: 11px;
+}
+
+.logs-button {
+    -fx-background-color: rgba(20, 25, 32, 0.92);
+    -fx-text-fill: #eef2f7;
+    -fx-border-color: rgba(156, 166, 181, 0.32);
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-font-size: 11px;
+    -fx-font-weight: 900;
+}
+
+.logs-button:hover {
+    -fx-background-color: rgba(45, 54, 66, 0.98);
+    -fx-border-color: rgba(220, 226, 236, 0.52);
+}
+
+.version-label {
+    -fx-text-fill: #8f98a7;
+    -fx-font-family: "Consolas", "JetBrains Mono", monospace;
+    -fx-font-size: 12px;
+}
+
+.progress-container {
+    -fx-padding: 12px;
+    -fx-background-color: rgba(5, 8, 12, 0.64);
+    -fx-background-radius: 8px;
+    -fx-border-color: rgba(255, 255, 255, 0.07);
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+}
+
+.progress-bar {
+    -fx-accent: #c83a3a;
+}
+
+.progress-bar .bar {
+    -fx-background-color: linear-gradient(to right, #c83a3a, #f0bd55);
+    -fx-background-insets: 0;
+    -fx-background-radius: 8px;
+}
+
+.progress-bar .track {
+    -fx-background-color: rgba(16, 20, 26, 0.92);
+    -fx-background-radius: 8px;
+    -fx-border-color: rgba(150, 160, 175, 0.22);
+    -fx-border-radius: 8px;
+}
+
+.progress-status-label {
+    -fx-text-fill: #cbd2dd;
+    -fx-font-size: 11px;
+    -fx-font-weight: 700;
+    -fx-line-spacing: 2px;
+}
+
+.progress-percent-label {
+    -fx-text-fill: #f4c65a;
+    -fx-font-family: "Consolas", "JetBrains Mono", monospace;
+    -fx-font-size: 12px;
+    -fx-font-weight: 900;
+}
+
+.activity-indicator {
+    -fx-progress-color: #f4c65a;
+}
+
+.overlay-backdrop {
+    -fx-background-color: rgba(0, 0, 0, 0.52);
+}
+
+.overlay-panel {
+    -fx-padding: 18px;
+    -fx-background-color: rgba(9, 13, 19, 0.97);
+    -fx-background-radius: 10px;
+    -fx-border-color: rgba(255, 255, 255, 0.10);
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.78), 24, 0.34, 0, 8);
+}
+
+.overlay-header {
+    -fx-min-height: 32px;
+}
+
+.overlay-title {
+    -fx-text-fill: #f1f4f8;
+    -fx-font-size: 18px;
+    -fx-font-weight: 900;
+}
+
+.overlay-close-button {
+    -fx-background-color: rgba(22, 27, 35, 0.94);
+    -fx-text-fill: #e8edf5;
+    -fx-border-color: rgba(180, 190, 206, 0.35);
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-font-family: "Consolas", "JetBrains Mono", monospace;
+    -fx-font-size: 18px;
+    -fx-font-weight: 900;
+    -fx-padding: 0;
+    -fx-min-width: 32px;
+    -fx-min-height: 32px;
+    -fx-pref-width: 32px;
+    -fx-pref-height: 32px;
+    -fx-max-width: 32px;
+    -fx-max-height: 32px;
+}
+
+.overlay-close-button:hover {
+    -fx-background-color: rgba(130, 32, 37, 0.95);
+    -fx-border-color: rgba(255, 150, 150, 0.58);
+}
+
+.overlay-action-button {
+    -fx-padding: 0 12px;
+    -fx-min-height: 30px;
+}
+
+.log-text-area {
+    -fx-font-family: "Consolas", "JetBrains Mono", monospace;
+    -fx-font-size: 12px;
+    -fx-text-fill: #dce3ee;
+    -fx-control-inner-background: #06090e;
+    -fx-highlight-fill: #7c2824;
+    -fx-highlight-text-fill: #ffffff;
+    -fx-border-color: rgba(170, 180, 195, 0.18);
+    -fx-border-width: 1px;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-effect: none;
+}
+
+.log-text-area .content {
+    -fx-background-color: #06090e;
+}
+
+.settings-content {
+    -fx-spacing: 14px;
+}
+
+.settings-description {
+    -fx-text-fill: #c8d0dc;
+    -fx-font-size: 12px;
+}
+
+.settings-value-label {
+    -fx-text-fill: #f4c65a;
+    -fx-font-family: "Consolas", "JetBrains Mono", monospace;
+    -fx-font-size: 15px;
+    -fx-font-weight: 900;
+}
+
+.slider .track {
+    -fx-background-color: rgba(20, 25, 32, 0.96);
+    -fx-background-radius: 8px;
+}
+
+.slider .thumb {
+    -fx-background-color: #f4c65a;
+    -fx-background-radius: 50%;
+    -fx-border-color: rgba(255, 241, 190, 0.78);
+    -fx-border-radius: 50%;
+}
+
+.slider .axis {
+    -fx-tick-label-fill: #aab3c1;
+}
