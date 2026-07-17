@@ -1,0 +1,89 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
+}
+
+group = 'com.makar'
+version = '2.0.1'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+javafx {
+    version = '21.0.4'
+    modules = ['javafx.controls']
+}
+
+dependencies {
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.17.2'
+    testImplementation platform('org.junit:junit-bom:5.11.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+application {
+    applicationName = 'TacticalLauncher'
+    mainClass = 'com.makar.launcher.Main'
+    applicationDefaultJvmArgs = ['-Xmx512m']
+}
+
+def generatedVersionResourcesDir = layout.buildDirectory.dir('generated/resources/launcherVersion')
+
+tasks.register('generateLauncherVersionProperties') {
+    def outputFile = generatedVersionResourcesDir.map { it.file('launcher-version.properties') }
+    outputs.file(outputFile)
+    inputs.property('launcherVersion', project.version.toString())
+
+    doLast {
+        def file = outputFile.get().asFile
+        file.parentFile.mkdirs()
+        file.text = "version=${project.version}\n"
+    }
+}
+
+sourceSets {
+    main {
+        resources.srcDir(generatedVersionResourcesDir)
+    }
+}
+
+tasks.named('processResources') {
+    dependsOn(tasks.named('generateLauncherVersionProperties'))
+}
+
+tasks.named('run') {
+    systemProperty 'launcher.disableSelfUpdateCheck',
+            System.getProperty('launcher.disableSelfUpdateCheck', 'false')
+}
+
+tasks.register('runDev', JavaExec) {
+    group = 'application'
+    description = 'Runs the launcher with self-update check disabled for local development.'
+    dependsOn(tasks.named('classes'))
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass.set(application.mainClass)
+    jvmArgs(application.applicationDefaultJvmArgs)
+    systemProperty 'launcher.disableSelfUpdateCheck', 'true'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+jar {
+    archiveBaseName = 'TacticalLauncher'
+    archiveVersion = project.version
+    manifest {
+        attributes(
+                'Main-Class': application.mainClass.get(),
+                'Implementation-Title': 'DeluxeWarfareLauncher',
+                'Implementation-Version': project.version
+        )
+    }
+}
