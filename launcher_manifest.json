@@ -159,6 +159,13 @@
       "required": true
     },
     {
+      "path": "mods/Spectrum-Zone-Map-1.2.0.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__Spectrum-Zone-Map-1.2.0.jar",
+      "sha256": "21cc066a35fdd9c1840f03085d48f1145403554a7174a2b932f087b41a0423c5",
+      "size": 8080927,
+      "required": true
+    },
+    {
       "path": "mods/superbwarfare-0.8.9-final-mc1.20.1-6effe4385-all.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__superbwarfare-0.8.9-final-mc1.20.1-6effe4385-all.jar",
       "sha256": "6eece0df9c927bddee3bd373fe90a2bbcba7157e9408ee0f94d13e04dc638395",
@@ -277,47 +284,12 @@
       "sha256": "337bcd3baac269ba2a408dbd547fe3ea10f316e9cfc9d70e46c08fc09f3424d7",
       "size": 13075030,
       "required": false
-    },
-
-    {
-      "path": "mods/oculus-mc1.20.1-1.8.0.jar",
-      "sha256": "0945df0cba0f62b3901dd80c3268e5311b770ece78c78037a45db12ac0425fef",
-      "size": 2851119,
-      "required": false
-    },
-        {
-      "path": "shaderpacks/spooklementary_v2.0.4.zip",
-      "sha256": "34ae1317940876f42272e3fd8f9ec2be97b2cdfe2eb8aeaf7bf971304d1a168d",
-      "size": 558206,
-      "required": false
-    },
-    {
-      "path": "shaderpacks/Bliss_v2.1.2_(Chocapic13_Shaders_edit).zip",
-      "sha256": "f41db92acc585fe9ffe0cc124d6ecaea27cef9ded91129ebc2a8e60226947b2c",
-      "size": 1791406,
-      "required": false
-    },
-    {
-      "path": "shaderpacks/ComplementaryUnbound_r5.8.1.zip",
-      "sha256": "bb89b1fc54687d4147a837fb2e3c3f7261a13bee51819761e9b6a91cb7915965",
-      "size": 546928,
-      "required": false
-    },
-    {
-      "path": "shaderpacks/photon_v1.2a.zip",
-      "sha256": "a7134a10138f6e5fe523dafa23bd266ba2e53621ac65a5e23294fe9a125b9d73",
-      "size": 3737845,
-      "required": false
     }
   ],
   "optionalAllowedDirectories": [
     {
       "path": "mods/.connector/",
       "reason": "Connector runtime/cache files for Replay Mod"
-    },
-    {
-      "path": "shaderpacks/",
-      "reason": "for txt"
     },
     {
       "path": "mods/connector/",
@@ -330,10 +302,6 @@
     {
       "path": "tacz/ChaosCraft's Apocalyptic Arsenal/",
       "reason": "Runtime/exported TaCZ gunpack from apocalypticarsenal-1.0.1.jar"
-    },
-    {
-      "path":"tacz/immersive_ballistic/",
-      "reason": "Runtime/exported TacZ gunpack from immersive_ballistic"
     }
   ],
   "deleteUnknownMods": true,
@@ -360,6 +328,7 @@
     "Patchouli-1.20.1-85-FORGE.jar",
     "Ping-Wheel-1.12.1-forge-1.20.1.jar",
     "player-animation-lib-forge-1.0.2-rc1+1.20.jar",
+    "Spectrum-Zone-Map-1.2.0.jar",
     "superbwarfare-0.8.9-final-mc1.20.1-6effe4385-all.jar",
     "superbwarfaredronehud-1.0-R.jar",
     "tactical_jammer.jar",
