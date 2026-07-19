@@ -284,6 +284,30 @@
       "sha256": "0945df0cba0f62b3901dd80c3268e5311b770ece78c78037a45db12ac0425fef",
       "size": 2851119,
       "required": false
+    },
+        {
+      "path": "shaderpacks/spooklementary_v2.0.4.zip",
+      "sha256": "34ae1317940876f42272e3fd8f9ec2be97b2cdfe2eb8aeaf7bf971304d1a168d",
+      "size": 558206,
+      "required": false
+    },
+    {
+      "path": "shaderpacks/Bliss_v2.1.2_(Chocapic13_Shaders_edit).zip",
+      "sha256": "f41db92acc585fe9ffe0cc124d6ecaea27cef9ded91129ebc2a8e60226947b2c",
+      "size": 1791406,
+      "required": false
+    },
+    {
+      "path": "shaderpacks/ComplementaryUnbound_r5.8.1.zip",
+      "sha256": "bb89b1fc54687d4147a837fb2e3c3f7261a13bee51819761e9b6a91cb7915965",
+      "size": 546928,
+      "required": false
+    },
+    {
+      "path": "shaderpacks/photon_v1.2a.zip",
+      "sha256": "a7134a10138f6e5fe523dafa23bd266ba2e53621ac65a5e23294fe9a125b9d73",
+      "size": 3737845,
+      "required": false
     }
   ],
   "optionalAllowedDirectories": [
