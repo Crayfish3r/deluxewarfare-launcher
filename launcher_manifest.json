@@ -316,6 +316,10 @@
       "reason": "Connector runtime/cache files for Replay Mod"
     },
     {
+      "path": "shaderpacks/",
+      "reason": "for txt"
+    },
+    {
       "path": "mods/connector/",
       "reason": "Connector runtime/cache files for Replay Mod"
     },
