@@ -278,30 +278,44 @@
       "required": true
     }
   ],
-  "optionalAllowedFiles": [
-    {
-      "path": "mods/replaymod-1.20.1-2.6.13.jar",
-      "sha256": "337bcd3baac269ba2a408dbd547fe3ea10f316e9cfc9d70e46c08fc09f3424d7",
-      "size": 13075030,
-      "required": false
-    }
+    "optionalAllowedFiles":  [
+{
+"path":  "mods/replaymod-1.20.1-2.6.13.jar",
+"sha256":  "337bcd3baac269ba2a408dbd547fe3ea10f316e9cfc9d70e46c08fc09f3424d7",
+"size":  13075030,
+"required":  false
+},
+{
+"path":  "mods/oculus-mc1.20.1-1.8.0.jar",
+"sha256":  "0945df0cba0f62b3901dd80c3268e5311b770ece78c78037a45db12ac0425fef",
+"size":  2851119,
+"required":  false
+}
   ],
-  "optionalAllowedDirectories": [
+        "optionalAllowedDirectories":  [
     {
-      "path": "mods/.connector/",
-      "reason": "Connector runtime/cache files for Replay Mod"
+      "path":  "mods/.connector/",
+      "reason":  "Connector runtime/cache files for Replay Mod"
     },
     {
-      "path": "mods/connector/",
-      "reason": "Connector runtime/cache files for Replay Mod"
+      "path":  "mods/connector/",
+      "reason":  "Connector runtime/cache files for Replay Mod"
     },
     {
-      "path": "tacz/tacz_default_gun/",
-      "reason": "Default TaCZ gun pack is installed automatically by the TaCZ mod"
+      "path":  "tacz/tacz_default_gun/",
+      "reason":  "Default TaCZ gun pack is installed automatically by the TaCZ mod"
     },
     {
-      "path": "tacz/ChaosCraft's Apocalyptic Arsenal/",
-      "reason": "Runtime/exported TaCZ gunpack from apocalypticarsenal-1.0.1.jar"
+      "path":  "tacz/ChaosCraft\u0027s Apocalyptic Arsenal/",
+      "reason":  "Runtime/exported TaCZ gunpack from apocalypticarsenal-1.0.1.jar"
+    },
+    {
+      "path":  "shaderpacks/",
+      "reason":  "for txt"
+    },
+    {
+      "path":  "tacz/immersive_ballistic/",
+      "reason":  "Runtime/exported TacZ gunpack from immersive_ballistic"
     }
   ],
   "deleteUnknownMods": true,
