@@ -271,10 +271,10 @@
       "required": true
     },
     {
-      "path": "tacz/Vanguard_Armament_v1.0.0.zip",
-      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/tacz__Vanguard_Armament_v1.0.0.zip",
-      "sha256": "6dbf24912b7d104b60b12cca5a591fb202c2d9f6f4bb9f4504b9d378b9a3d8fd",
-      "size": 10411641,
+      "path": "tacz/Vanguard_Armament_v1.0.1_hotfix4.zip",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/tacz__Vanguard_Armament_v1.0.1_hotfix4.zip",
+      "sha256": "e80a9477e7d3b133a8cfbbd8505e65f5e1a25dab547d5cb7cf2c33ad734eb020",
+      "size": 24927043,
       "required": true
     }
   ],
