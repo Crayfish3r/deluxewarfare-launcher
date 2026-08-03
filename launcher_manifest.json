@@ -117,6 +117,13 @@
       "required": true
     },
     {
+      "path": "mods/moderndamage-1.0.32.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__moderndamage-1.0.32.jar",
+      "sha256": "eaf15ce984a6af47f25fffa026abc7eb8be64d4ecb4b81b943a29d3c421fc461",
+      "size": 481005,
+      "required": true
+    },
+    {
       "path": "mods/ParCool-1.20.1-3.4.3.3.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__ParCool-1.20.1-3.4.3.3.jar",
       "sha256": "2ddef8752b5a1428035b95f29e62c81e33b80d37851681e1b928d8a01615c6e7",
@@ -322,6 +329,7 @@
     "kotlinforforge-4.12.0-all.jar",
     "lrtactical-1.20.1-0.4.1.jar",
     "military_equipment-3.0.2-forge-1.20.1.jar",
+    "moderndamage-1.0.32.jar",
     "ParCool-1.20.1-3.4.3.3.jar",
     "ParCool-CompatibilityAddon-1.20.1-3.4.1.5-1.1.jar",
     "Patchouli-1.20.1-85-FORGE.jar",
