@@ -68,13 +68,6 @@
       "required": true
     },
     {
-      "path": "mods/firstaid-1.20.1-1.1.jar",
-      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__firstaid-1.20.1-1.1.jar",
-      "sha256": "c2021a688e301f7a44da0ae04163ec8b8f077154e02c48e89063027b0cf33e4a",
-      "size": 450159,
-      "required": true
-    },
-    {
       "path": "mods/forge_auth_mod-0.3.0.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__forge_auth_mod-0.3.0.jar",
       "sha256": "ac9357b422006d73600af06005f3cf3fa6123a6bd12beea1d40951a0bc2bfe5c",
@@ -205,13 +198,6 @@
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__tacz-1.20.1-1.1.8-hotfix.jar",
       "sha256": "9ed8ada1283ed7a793a70cc1b51c4a340f367ce84707e1a7b8cf21ee3d288d77",
       "size": 57465167,
-      "required": true
-    },
-    {
-      "path": "mods/tacz-firstaid-compat-1.0.0.jar",
-      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__tacz-firstaid-compat-1.0.0.jar",
-      "sha256": "05f2214bac181d27c4b104933df476caf5b66efbad7c20a84a9e127cd6705c1d",
-      "size": 865639,
       "required": true
     },
     {
