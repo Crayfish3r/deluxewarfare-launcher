@@ -189,8 +189,8 @@
     {
       "path": "mods/tacticaltablet-1.0.0.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__tacticaltablet-1.0.0.jar",
-      "sha256": "8ff2368a3612de7bc6a14662afca8ace85a64523a7cebad26f9d4667507f9f83",
-      "size": 1782843,
+      "sha256": "4d939a0cb8750a254d1abf32ec9ec2b8807e330108d48e1dbb2202c17546cb4d",
+      "size": 1891853,
       "required": true
     },
     {
@@ -278,44 +278,30 @@
       "required": true
     }
   ],
-    "optionalAllowedFiles":  [
-{
-"path":  "mods/replaymod-1.20.1-2.6.13.jar",
-"sha256":  "337bcd3baac269ba2a408dbd547fe3ea10f316e9cfc9d70e46c08fc09f3424d7",
-"size":  13075030,
-"required":  false
-},
-{
-"path":  "mods/oculus-mc1.20.1-1.8.0.jar",
-"sha256":  "0945df0cba0f62b3901dd80c3268e5311b770ece78c78037a45db12ac0425fef",
-"size":  2851119,
-"required":  false
-}
+  "optionalAllowedFiles": [
+    {
+      "path": "mods/replaymod-1.20.1-2.6.13.jar",
+      "sha256": "337bcd3baac269ba2a408dbd547fe3ea10f316e9cfc9d70e46c08fc09f3424d7",
+      "size": 13075030,
+      "required": false
+    }
   ],
-        "optionalAllowedDirectories":  [
+  "optionalAllowedDirectories": [
     {
-      "path":  "mods/.connector/",
-      "reason":  "Connector runtime/cache files for Replay Mod"
+      "path": "mods/.connector/",
+      "reason": "Connector runtime/cache files for Replay Mod"
     },
     {
-      "path":  "mods/connector/",
-      "reason":  "Connector runtime/cache files for Replay Mod"
+      "path": "mods/connector/",
+      "reason": "Connector runtime/cache files for Replay Mod"
     },
     {
-      "path":  "tacz/tacz_default_gun/",
-      "reason":  "Default TaCZ gun pack is installed automatically by the TaCZ mod"
+      "path": "tacz/tacz_default_gun/",
+      "reason": "Default TaCZ gun pack is installed automatically by the TaCZ mod"
     },
     {
-      "path":  "tacz/ChaosCraft\u0027s Apocalyptic Arsenal/",
-      "reason":  "Runtime/exported TaCZ gunpack from apocalypticarsenal-1.0.1.jar"
-    },
-    {
-      "path":  "shaderpacks/",
-      "reason":  "for txt"
-    },
-    {
-      "path":  "tacz/immersive_ballistic/",
-      "reason":  "Runtime/exported TacZ gunpack from immersive_ballistic"
+      "path": "tacz/ChaosCraft's Apocalyptic Arsenal/",
+      "reason": "Runtime/exported TaCZ gunpack from apocalypticarsenal-1.0.1.jar"
     }
   ],
   "deleteUnknownMods": true,
