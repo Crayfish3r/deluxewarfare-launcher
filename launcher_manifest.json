@@ -110,6 +110,13 @@
       "required": true
     },
     {
+      "path": "mods/lradd-1.20.1-0.3.0.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__lradd-1.20.1-0.3.0.jar",
+      "sha256": "4cf60b30e843ecd92b5ff05bcfa12a89754e7ad947b6d3ea8485eb340d5f1783",
+      "size": 42492650,
+      "required": true
+    },
+    {
       "path": "mods/military_equipment-3.0.2-forge-1.20.1.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__military_equipment-3.0.2-forge-1.20.1.jar",
       "sha256": "123721507432155e1028fc72656d8035f33c99aaa0dab0f64951c6a7823e2dab",
@@ -189,8 +196,8 @@
     {
       "path": "mods/tacticaltablet-1.0.0.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__tacticaltablet-1.0.0.jar",
-      "sha256": "da1b078045830c271d6685b11fe3a5022b6509be3d2b56c5d56ea3da633bb757",
-      "size": 1919989,
+      "sha256": "77fb8c8ecafba53ff896deee863c12518a7d45c0248b5d0e49af07d2bffdd707",
+      "size": 1952037,
       "required": true
     },
     {
@@ -328,6 +335,7 @@
     "immersive_ballistic-1.3.jar",
     "kotlinforforge-4.12.0-all.jar",
     "lrtactical-1.20.1-0.4.1.jar",
+    "lradd-1.20.1-0.3.0.jar",
     "military_equipment-3.0.2-forge-1.20.1.jar",
     "moderndamage-1.0.32.jar",
     "ParCool-1.20.1-3.4.3.3.jar",
