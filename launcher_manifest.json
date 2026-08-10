@@ -318,8 +318,8 @@
       "reason":  "Runtime/exported TacZ gunpack from immersive_ballistic"
     },
     {
-      "path": "tacz/iradd_default_gun/",
-      "reason": "runtime/exported iradd"
+      "path": "tacz/lradd_default_gun/",
+      "reason": "runtime/exported lradd"
     }
     
   ],
