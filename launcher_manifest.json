@@ -196,8 +196,8 @@
     {
       "path": "mods/tacticaltablet-1.0.0.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__tacticaltablet-1.0.0.jar",
-      "sha256": "77fb8c8ecafba53ff896deee863c12518a7d45c0248b5d0e49af07d2bffdd707",
-      "size": 1952037,
+      "sha256": "1e036a09cbadcce6581ee9fd864942690e5f845d760a2ebe4ba04855bdf9f3de",
+      "size": 1953867,
       "required": true
     },
     {
@@ -316,12 +316,7 @@
     {
       "path":  "tacz/immersive_ballistic/",
       "reason":  "Runtime/exported TacZ gunpack from immersive_ballistic"
-    },
-    {  
-      "path":  "tacz/lradd_default_gun",
-      "reason": "Runtime/exported TacZ"
     }
-          
   ],
   "deleteUnknownMods": true,
   "allowedMods": [
