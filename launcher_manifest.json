@@ -1,7 +1,7 @@
 {
   "minecraftVersion": "1.20.1",
   "forgeVersion": "47.4.20",
-  "modpackVersion": "1.0.1",
+  "modpackVersion": "1.0.2",
   "requiredJava": 17,
   "files": [
     {
@@ -68,10 +68,10 @@
       "required": true
     },
     {
-      "path": "mods/forge_auth_mod-0.3.0.jar",
-      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__forge_auth_mod-0.3.0.jar",
-      "sha256": "ac9357b422006d73600af06005f3cf3fa6123a6bd12beea1d40951a0bc2bfe5c",
-      "size": 25859,
+      "path": "mods/forge_auth_mod-0.5.0.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__forge_auth_mod-0.5.0.jar",
+      "sha256": "218d6b37ec37174bdc01e9336f9a31bf969026d4e9711f5b695be995f47e60e1",
+      "size": 39039,
       "required": true
     },
     {
@@ -103,17 +103,17 @@
       "required": true
     },
     {
-      "path": "mods/lrtactical-1.20.1-0.4.1.jar",
-      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__lrtactical-1.20.1-0.4.1.jar",
-      "sha256": "42f3b2f5a4194baa10ce76720b5770290a64105634f0dcd9182fc0ef33800e6e",
-      "size": 5439652,
-      "required": true
-    },
-    {
       "path": "mods/lradd-1.20.1-0.3.0.jar",
       "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__lradd-1.20.1-0.3.0.jar",
       "sha256": "4cf60b30e843ecd92b5ff05bcfa12a89754e7ad947b6d3ea8485eb340d5f1783",
       "size": 42492650,
+      "required": true
+    },
+    {
+      "path": "mods/lrtactical-1.20.1-0.4.1.jar",
+      "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/modpack-1.0.0/mods__lrtactical-1.20.1-0.4.1.jar",
+      "sha256": "42f3b2f5a4194baa10ce76720b5770290a64105634f0dcd9182fc0ef33800e6e",
+      "size": 5439652,
       "required": true
     },
     {
@@ -271,50 +271,31 @@
       "required": true
     }
   ],
-    "optionalAllowedFiles":  [
-{
-"path":  "mods/replaymod-1.20.1-2.6.13.jar",
-"sha256":  "337bcd3baac269ba2a408dbd547fe3ea10f316e9cfc9d70e46c08fc09f3424d7",
-"size":  13075030,
-"required":  false
-},
-{
-"path":  "mods/oculus-mc1.20.1-1.8.0.jar",
-"sha256":  "0945df0cba0f62b3901dd80c3268e5311b770ece78c78037a45db12ac0425fef",
-"size":  2851119,
-"required":  false
-}
-  ],
-        "optionalAllowedDirectories":  [
+  "optionalAllowedFiles": [
     {
-      "path":  "mods/.connector/",
-      "reason":  "Connector runtime/cache files for Replay Mod"
-    },
-    {
-      "path":  "mods/connector/",
-      "reason":  "Connector runtime/cache files for Replay Mod"
-    },
-    {
-      "path":  "tacz/tacz_default_gun/",
-      "reason":  "Default TaCZ gun pack is installed automatically by the TaCZ mod"
-    },
-    {
-      "path":  "tacz/ChaosCraft\u0027s Apocalyptic Arsenal/",
-      "reason":  "Runtime/exported TaCZ gunpack from apocalypticarsenal-1.0.1.jar"
-    },
-    {
-      "path":  "shaderpacks/",
-      "reason":  "for txt"
-    },
-    {
-      "path":  "tacz/immersive_ballistic/",
-      "reason":  "Runtime/exported TacZ gunpack from immersive_ballistic"
-    },
-    {
-      "path": "tacz/lradd_default_gun/",
-      "reason": "runtime/exported lradd"
+      "path": "mods/replaymod-1.20.1-2.6.13.jar",
+      "sha256": "337bcd3baac269ba2a408dbd547fe3ea10f316e9cfc9d70e46c08fc09f3424d7",
+      "size": 13075030,
+      "required": false
     }
-    
+  ],
+  "optionalAllowedDirectories": [
+    {
+      "path": "mods/.connector/",
+      "reason": "Connector runtime/cache files for Replay Mod"
+    },
+    {
+      "path": "mods/connector/",
+      "reason": "Connector runtime/cache files for Replay Mod"
+    },
+    {
+      "path": "tacz/tacz_default_gun/",
+      "reason": "Default TaCZ gun pack is installed automatically by the TaCZ mod"
+    },
+    {
+      "path": "tacz/ChaosCraft's Apocalyptic Arsenal/",
+      "reason": "Runtime/exported TaCZ gunpack from apocalypticarsenal-1.0.1.jar"
+    }
   ],
   "deleteUnknownMods": true,
   "allowedMods": [
@@ -327,13 +308,13 @@
     "curios-forge-5.14.1+1.20.1.jar",
     "embeddium-0.3.31mc1.20.1.jar",
     "fabric-api-0.92.6+1.11.14+1.20.1.jar",
-    "forge_auth_mod-0.3.0.jar",
+    "forge_auth_mod-0.5.0.jar",
     "fracturepoint-1.20.1-2.3.11-beta-all.jar",
     "geckolib-forge-1.20.1-4.7.jar",
     "immersive_ballistic-1.3.jar",
     "kotlinforforge-4.12.0-all.jar",
-    "lrtactical-1.20.1-0.4.1.jar",
     "lradd-1.20.1-0.3.0.jar",
+    "lrtactical-1.20.1-0.4.1.jar",
     "military_equipment-3.0.2-forge-1.20.1.jar",
     "moderndamage-1.0.32.jar",
     "ParCool-1.20.1-3.4.3.3.jar",
