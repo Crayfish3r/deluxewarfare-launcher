@@ -52,6 +52,46 @@ final class ManagedFoldersIntegrityServiceTest {
         assertTrue(Files.exists(requiredRootFile));
     }
 
+    @Test
+    void detectsModifiedRequiredFileAndAcceptsUnchangedOptionalFile() throws Exception {
+        Path requiredFile = gameDirectory.resolve("mods/required.jar");
+        Path optionalFile = gameDirectory.resolve("mods/optional.jar");
+        Files.createDirectories(requiredFile.getParent());
+        Files.writeString(requiredFile, "required-original");
+        Files.writeString(optionalFile, "optional-original");
+
+        LauncherManifest manifest = new LauncherManifest();
+        manifest.setFiles(List.of(manifestFile("mods/required.jar", "required-original")));
+        ManifestFileEntry optional = manifestFile("mods/optional.jar", "optional-original");
+        optional.setRequired(false);
+        manifest.setOptionalAllowedFiles(List.of(optional));
+        Files.writeString(requiredFile, "tampered");
+
+        ManagedFoldersIntegrityService.ScanResult result =
+                new ManagedFoldersIntegrityService().scanFully(manifest, gameDirectory);
+
+        assertEquals(List.of("mods/required.jar"), result.violations());
+        assertEquals(2, result.hashedFiles());
+        assertTrue(result.hashedBytes() > 0);
+    }
+
+    @Test
+    void reconciliationDoesNotRehashUnchangedFiles() throws Exception {
+        Path requiredFile = gameDirectory.resolve("mods/required.jar");
+        Files.createDirectories(requiredFile.getParent());
+        Files.writeString(requiredFile, "content");
+        LauncherManifest manifest = new LauncherManifest();
+        manifest.setFiles(List.of(manifestFile("mods/required.jar", "content")));
+        ManagedFoldersIntegrityService service = new ManagedFoldersIntegrityService();
+        ManagedFoldersIntegrityService.HashCache cache = new ManagedFoldersIntegrityService.HashCache();
+
+        assertEquals(1, service.reconcile(manifest, gameDirectory, cache).hashedFiles());
+        ManagedFoldersIntegrityService.ScanResult second = service.reconcile(manifest, gameDirectory, cache);
+
+        assertEquals(0, second.hashedFiles());
+        assertTrue(second.violations().isEmpty());
+    }
+
     private ManifestFileEntry manifestFile(String path, String content) throws Exception {
         byte[] bytes = content.getBytes();
         ManifestFileEntry entry = new ManifestFileEntry();

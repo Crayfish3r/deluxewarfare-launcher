@@ -3,7 +3,9 @@ setlocal
 
 set "APP_HOME=%~dp0"
 set "GRADLE_VERSION=8.10.2"
-if defined LOCALAPPDATA (
+if defined TACTICAL_LAUNCHER_GRADLE_CACHE (
+  set "GRADLE_CACHE=%TACTICAL_LAUNCHER_GRADLE_CACHE%"
+) else if defined LOCALAPPDATA (
   set "GRADLE_CACHE=%LOCALAPPDATA%\tactical-launcher-gradle-cache"
 ) else (
   set "GRADLE_CACHE=%TEMP%\tactical-launcher-gradle-cache"

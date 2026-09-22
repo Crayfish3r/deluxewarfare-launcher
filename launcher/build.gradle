@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.makar'
-version = '2.0.1'
+version = '2.1.1'
 
 java {
     toolchain {
@@ -19,6 +19,7 @@ javafx {
 
 dependencies {
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.17.2'
+    implementation 'net.java.dev.jna:jna-platform:5.14.0'
     testImplementation platform('org.junit:junit-bom:5.11.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
@@ -34,16 +35,20 @@ application {
 }
 
 def generatedVersionResourcesDir = layout.buildDirectory.dir('generated/resources/launcherVersion')
+def manifestPublicKeySpki = providers.gradleProperty('manifestPublicKeySpki').orElse('UNCONFIGURED')
 
 tasks.register('generateLauncherVersionProperties') {
     def outputFile = generatedVersionResourcesDir.map { it.file('launcher-version.properties') }
     outputs.file(outputFile)
     inputs.property('launcherVersion', project.version.toString())
+    inputs.property('manifestPublicKeySpki', manifestPublicKeySpki)
 
     doLast {
         def file = outputFile.get().asFile
         file.parentFile.mkdirs()
         file.text = "version=${project.version}\n"
+        def trustFile = new File(file.parentFile, 'manifest-trust.properties')
+        trustFile.text = "publicKeySpki=${manifestPublicKeySpki.get()}\n"
     }
 }
 

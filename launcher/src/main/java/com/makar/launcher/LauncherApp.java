@@ -80,6 +80,8 @@ public final class LauncherApp extends Application {
     private Button playButton;
     private Button loginWithDiscordButton;
     private StackPane settingsOverlay;
+    private StackPane logsOverlay;
+    private Stage primaryStage;
     private PauseTransition loginCodeDebounce;
     private boolean loginCodeSubmitting;
     private boolean launcherBusy;
@@ -87,13 +89,14 @@ public final class LauncherApp extends Application {
     private boolean launcherUpdateCheckBlocked;
     private boolean discordSessionValidationPending;
     private boolean discordSessionValidationFailed;
-    private LauncherUpdateInfo availableLauncherUpdate;
+    private LauncherUpdateCandidate availableLauncherUpdate;
     private CompletableFuture<UpdateResult> activeUpdateFuture;
     private Process minecraftProcess;
     private RuntimeManagedFolderProtectionService runtimeManagedFolderProtectionService;
 
     @Override
     public void start(Stage stage) {
+        primaryStage = stage;
         LauncherPaths.createConfigDirectory();
 
         nicknameField = new TextField(config.getNickname());
@@ -192,7 +195,7 @@ public final class LauncherApp extends Application {
                 logArea.positionCaret(newValue.length()));
         logArea.setPrefSize(500, 360);
 
-        StackPane logsOverlay = createLogsOverlay(logArea);
+        logsOverlay = createLogsOverlay(logArea);
         settingsOverlay = createSettingsOverlay();
         Pane content = createContentPane(authUiEnabled, logsOverlay);
         Pane background = createBackground();
@@ -240,8 +243,13 @@ public final class LauncherApp extends Application {
     public void stop() {
         terminateMinecraftBecauseLauncherClosed();
         stopRuntimeManagedFolderProtection();
-        config.setNickname(nicknameField.getText().trim());
-        config.save();
+        minecraftLaunchService.close();
+        try {
+            config.setNickname(nicknameField.getText().trim());
+            config.save();
+        } finally {
+            logService.close();
+        }
     }
 
     private Pane createBackground() {
@@ -429,7 +437,7 @@ public final class LauncherApp extends Application {
             if (systemBean instanceof com.sun.management.OperatingSystemMXBean extendedBean) {
                 long totalMemoryBytes = extendedBean.getTotalMemorySize();
                 long totalMemoryGb = totalMemoryBytes / 1024 / 1024 / 1024;
-                return (int) Math.max(4, totalMemoryGb - 2);
+                return (int) Math.max(4, totalMemoryGb - 4);
             }
         } catch (RuntimeException ignored) {
             return 4;
@@ -484,6 +492,9 @@ public final class LauncherApp extends Application {
     }
 
     private void showOverlay(StackPane overlay) {
+        if (overlay == logsOverlay) {
+            logService.setUiVisible(true);
+        }
         Node panel = getOverlayPanel(overlay);
         overlay.setManaged(true);
         overlay.setVisible(true);
@@ -503,6 +514,9 @@ public final class LauncherApp extends Application {
     }
 
     private void hideOverlay(StackPane overlay) {
+        if (overlay == logsOverlay) {
+            logService.setUiVisible(false);
+        }
         Node panel = getOverlayPanel(overlay);
 
         FadeTransition fade = new FadeTransition(Duration.millis(140), overlay);
@@ -654,7 +668,10 @@ public final class LauncherApp extends Application {
         }
 
         CompletableFuture
-                .supplyAsync(() -> launcherSelfUpdateService.checkForUpdate(config.getLauncherUpdateUrl()))
+                .supplyAsync(() -> launcherSelfUpdateService.checkForUpdate(
+                        config.getLauncherUpdateUrl(),
+                        config.getYandexDiskPublicUrl(),
+                        message -> updateUi(() -> logService.info(message))))
                 .whenComplete((updateInfo, throwable) -> updateUi(() -> {
                     launcherUpdateCheckCompleted = true;
                     if (throwable != null) {
@@ -688,10 +705,11 @@ public final class LauncherApp extends Application {
                     logService.info("Launcher update available: "
                             + launcherSelfUpdateService.getCurrentVersion()
                             + " -> "
-                            + availableLauncherUpdate.getVersion());
+                            + availableLauncherUpdate.updateInfo().getVersion());
 
-                    if (!availableLauncherUpdate.getNotes().isBlank()) {
-                        logService.info("Launcher update notes: " + availableLauncherUpdate.getNotes());
+                    if (!availableLauncherUpdate.updateInfo().getNotes().isBlank()) {
+                        logService.info("Launcher update notes: "
+                                + availableLauncherUpdate.updateInfo().getNotes());
                     }
 
                     if (isMandatoryLauncherUpdateAvailable()) {
@@ -728,11 +746,15 @@ public final class LauncherApp extends Application {
         checkUpdatesButton.setDisable(true);
         setProgressState(0.0, "Скачивание обновления лаунчера...");
 
-        logService.info("Downloading launcher update " + availableLauncherUpdate.getVersion() + "...");
+        LauncherUpdateCandidate updateCandidate = availableLauncherUpdate;
+        logService.info("Downloading launcher update "
+                + updateCandidate.updateInfo().getVersion()
+                + "...");
 
         CompletableFuture
                 .supplyAsync(() -> launcherSelfUpdateService.downloadInstaller(
-                        availableLauncherUpdate,
+                        updateCandidate,
+                        config.getYandexDiskPublicUrl(),
                         message -> updateUi(() -> logService.info(message))))
                 .whenComplete((installerPath, throwable) -> updateUi(() -> {
                     if (throwable != null) {
@@ -842,10 +864,6 @@ public final class LauncherApp extends Application {
                     );
                     prepareSkinSystem(gameDirectory);
 
-                    if (config.isBackendAuthEnabled()) {
-                        prepareBackendAuthToken(gameDirectory, nickname);
-                    }
-
                     MinecraftLaunchOptions options = new MinecraftLaunchOptions(
                             updateResult.javaRuntimeInfo().getExecutable(),
                             gameDirectory,
@@ -860,6 +878,10 @@ public final class LauncherApp extends Application {
                             config.getMemoryGb()
                     );
 
+                    TacticalAuthTokenService.PreparedAuth preparedAuth = config.isBackendAuthEnabled()
+                            ? prepareBackendAuth(gameDirectory, nickname, options)
+                            : null;
+
                     updateUi(() -> {
                         setProgressState(1.0, "Запуск Minecraft...");
                         logService.info("Starting Minecraft Forge " + options.getForgeVersionName() + "...");
@@ -870,17 +892,40 @@ public final class LauncherApp extends Application {
                     } else if (options.hasServerAddress()) {
                         updateUi(() -> logService.info("Auto join server is disabled. Starting Minecraft menu."));
                     }
-                    Process process = minecraftLaunchService.startMinecraft(options, line -> updateUi(() -> logService.info(line)));
+                    Process process;
+                    try {
+                        process = minecraftLaunchService.startMinecraft(options, logService::info);
+                        if (preparedAuth != null) {
+                            preparedAuth.bindMinecraftProcess(process);
+                        }
+                    } catch (RuntimeException exception) {
+                        if (preparedAuth != null) {
+                            preparedAuth.close();
+                        }
+                        throw exception;
+                    }
                     minecraftProcess = process;
                     startRuntimeManagedFolderProtection(process, updateResult.manifest(), gameDirectory, nickname);
+                    updateUi(() -> primaryStage.setIconified(true));
+                    TacticalAuthTokenService.PreparedAuth authForProcess = preparedAuth;
                     process.onExit().thenAccept(exitedProcess -> updateUi(() -> {
+                        if (authForProcess != null) {
+                            authForProcess.close();
+                        }
                         stopRuntimeManagedFolderProtection();
                         minecraftProcess = null;
+                        primaryStage.setIconified(false);
+                        primaryStage.show();
+                        primaryStage.toFront();
                         launcherBusy = false;
                         updatePlayButtonState();
                         checkUpdatesButton.setDisable(isMandatoryLauncherUpdateAvailable());
                         setProgressState(1.0, "Minecraft закрыт");
                         logService.info("Minecraft exited with code " + exitedProcess.exitValue() + ".");
+                        LogService.Metrics logMetrics = logService.metrics();
+                        logService.info("Log metrics | queueDepth=" + logMetrics.queueDepth()
+                                + " | uiBatchUpdates=" + logMetrics.uiBatchUpdates()
+                                + " | uiHistoryLines=" + logMetrics.uiHistoryLines());
                     }));
                 })
                 .whenComplete((ignored, throwable) -> {
@@ -912,7 +957,7 @@ public final class LauncherApp extends Application {
                 manifest,
                 gameDirectory,
                 process,
-                message -> updateUi(() -> logService.warn(message)),
+                logService::warn,
                 detectedFiles -> {
                     var unknownFiles = detectedFiles.stream()
                             .map(RuntimeManagedFolderProtectionService.DetectedFile::path)
@@ -927,7 +972,7 @@ public final class LauncherApp extends Application {
                             detectedFiles
                     );
                     if (response.isOk()) {
-                        updateUi(() -> logService.info("Runtime moderation alert sent."));
+                        logService.info("Runtime moderation alert sent.");
                     }
                 }
         );
@@ -955,7 +1000,11 @@ public final class LauncherApp extends Application {
         }
     }
 
-    private void prepareBackendAuthToken(Path gameDirectory, String nickname) {
+    private TacticalAuthTokenService.PreparedAuth prepareBackendAuth(
+            Path gameDirectory,
+            String nickname,
+            MinecraftLaunchOptions options
+    ) {
         String launcherSessionToken = config.getLauncherSessionToken();
         if (launcherSessionToken.isBlank()) {
             throw new IllegalStateException("Login with Discord before pressing Play.");
@@ -972,24 +1021,21 @@ public final class LauncherApp extends Application {
             logService.info("Minecraft nickname " + bindStatus + ": " + bindResponse.getProfile().getNickname());
         });
 
-        updateUi(() -> logService.info("Requesting game token..."));
-        BackendAuthService.GameTokenResponse tokenResponse = backendAuthService.requestGameToken(
-                launcherSessionToken,
-                nickname
-        );
-        if (!tokenResponse.isOk() || tokenResponse.getToken().isBlank()) {
-            throw new IllegalStateException("Backend did not return a game token.");
-        }
-
-        Path tokenPath = tacticalAuthTokenService.writeToken(
+        String playerUuid = GameAuthProtocol.offlinePlayerUuid(nickname);
+        String serverAddress = GameAuthProtocol.canonicalizeServerAddress(options.getServerAddress());
+        updateUi(() -> logService.info("Creating proof-of-possession launch session..."));
+        TacticalAuthTokenService.PreparedAuth prepared = tacticalAuthTokenService.prepare(
                 gameDirectory,
-                tokenResponse.getNickname(),
-                tokenResponse.getToken(),
-                backendAuthService.getBackendUrl(),
-                tokenResponse.getExpiresAt()
+                backendAuthService,
+                launcherSessionToken,
+                nickname,
+                config.getServerId(),
+                serverAddress,
+                playerUuid,
+                launcherSelfUpdateService.getCurrentVersion()
         );
-
-        updateUi(() -> logService.info("Wrote tactical auth token: " + tokenPath));
+        updateUi(() -> logService.info("Prepared public authentication descriptor: " + prepared.descriptorPath()));
+        return prepared;
     }
 
     private void prepareSkinSystem(Path gameDirectory) {
@@ -1207,7 +1253,13 @@ public final class LauncherApp extends Application {
             String nickname
     ) {
         updateUi(() -> logService.info("Validating managed folders: mods, resourcepacks, shaderpacks, tacz..."));
-        var unknownFiles = managedFoldersIntegrityService.findUnknownFiles(manifest, gameDirectory);
+        var scanResult = managedFoldersIntegrityService.scanFully(manifest, gameDirectory);
+        var unknownFiles = scanResult.violations();
+        logService.info("Pre-launch integrity metrics | durationMs="
+                + java.util.concurrent.TimeUnit.NANOSECONDS.toMillis(scanResult.durationNanos())
+                + " | examinedFiles=" + scanResult.examinedFiles()
+                + " | hashedFiles=" + scanResult.hashedFiles()
+                + " | hashedBytes=" + scanResult.hashedBytes());
         if (unknownFiles.isEmpty()) {
             updateUi(() -> logService.info("Managed folder validation passed."));
             return;
@@ -1242,7 +1294,7 @@ public final class LauncherApp extends Application {
             }
         });
 
-        var remainingUnknownFiles = managedFoldersIntegrityService.findUnknownFiles(manifest, gameDirectory);
+        var remainingUnknownFiles = managedFoldersIntegrityService.scanFully(manifest, gameDirectory).violations();
         if (!remainingUnknownFiles.isEmpty()) {
             throw new IllegalStateException("Some forbidden files could not be removed from managed folders.");
         }
@@ -1512,7 +1564,7 @@ public final class LauncherApp extends Application {
     }
 
     private boolean isMandatoryLauncherUpdateAvailable() {
-        return availableLauncherUpdate != null && availableLauncherUpdate.isMandatory();
+        return availableLauncherUpdate != null && availableLauncherUpdate.updateInfo().isMandatory();
     }
 
     private boolean isUpdateOperationRunning() {

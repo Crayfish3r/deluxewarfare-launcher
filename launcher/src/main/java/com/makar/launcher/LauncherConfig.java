@@ -11,7 +11,7 @@ import java.util.Properties;
 public final class LauncherConfig {
     private static final String CONFIG_FILE_NAME = "launcher.properties";
 
-    private static final int CURRENT_CONFIG_VERSION = 8;
+    private static final int CURRENT_CONFIG_VERSION = 9;
 
     private static final String DEFAULT_MANIFEST_URL =
             "https://Crayfish3r.github.io/deluxewarfare-launcher/launcher_manifest.json";
@@ -26,6 +26,7 @@ public final class LauncherConfig {
     private static final String DEFAULT_DONATION_ALERTS_URL =
             "https://www.donationalerts.com/r/zumadeluxe2004";
     private static final String DEFAULT_SERVER_HOST = "deluxewarfare.sosal.today";
+    private static final String DEFAULT_SERVER_ID = "deluxewarfare-main";
     private static final int DEFAULT_SERVER_PORT = 25565;
     private static final boolean DEFAULT_AUTO_JOIN_SERVER = true;
     private static final boolean DEFAULT_DISCORD_AUTH_ENABLED = true;
@@ -53,6 +54,7 @@ public final class LauncherConfig {
     private static final String JAVA_PATH_KEY = "javaPath";
     private static final String SERVER_HOST_KEY = "serverHost";
     private static final String SERVER_PORT_KEY = "serverPort";
+    private static final String SERVER_ID_KEY = "serverId";
     private static final String AUTO_JOIN_SERVER_KEY = "autoJoinServer";
     private static final String DISCORD_AUTH_ENABLED_KEY = "discordAuthEnabled";
     private static final String BACKEND_AUTH_ENABLED_KEY = "backendAuthEnabled";
@@ -73,6 +75,7 @@ public final class LauncherConfig {
     private String javaPath = "";
     private String serverHost = DEFAULT_SERVER_HOST;
     private int serverPort = DEFAULT_SERVER_PORT;
+    private String serverId = DEFAULT_SERVER_ID;
     private boolean autoJoinServer = DEFAULT_AUTO_JOIN_SERVER;
     private boolean discordAuthEnabled = DEFAULT_DISCORD_AUTH_ENABLED;
     private boolean backendAuthEnabled = DEFAULT_BACKEND_AUTH_ENABLED;
@@ -118,6 +121,7 @@ public final class LauncherConfig {
                 config.javaPath = "";
                 config.serverHost = DEFAULT_SERVER_HOST;
                 config.serverPort = DEFAULT_SERVER_PORT;
+                config.serverId = DEFAULT_SERVER_ID;
                 config.autoJoinServer = DEFAULT_AUTO_JOIN_SERVER;
                 config.discordAuthEnabled = DEFAULT_DISCORD_AUTH_ENABLED;
                 config.backendAuthEnabled = DEFAULT_BACKEND_AUTH_ENABLED;
@@ -142,6 +146,7 @@ public final class LauncherConfig {
             config.serverPort = parseServerPort(properties.getProperty(
                     SERVER_PORT_KEY,
                     Integer.toString(DEFAULT_SERVER_PORT)));
+            config.serverId = normalizeServerId(properties.getProperty(SERVER_ID_KEY, DEFAULT_SERVER_ID));
             config.autoJoinServer = Boolean.parseBoolean(properties.getProperty(
                     AUTO_JOIN_SERVER_KEY,
                     Boolean.toString(DEFAULT_AUTO_JOIN_SERVER)));
@@ -186,6 +191,7 @@ public final class LauncherConfig {
             config.javaPath = "";
             config.serverHost = DEFAULT_SERVER_HOST;
             config.serverPort = DEFAULT_SERVER_PORT;
+            config.serverId = DEFAULT_SERVER_ID;
             config.autoJoinServer = DEFAULT_AUTO_JOIN_SERVER;
             config.discordAuthEnabled = DEFAULT_DISCORD_AUTH_ENABLED;
             config.backendAuthEnabled = DEFAULT_BACKEND_AUTH_ENABLED;
@@ -293,6 +299,14 @@ public final class LauncherConfig {
                 : DEFAULT_SERVER_PORT;
     }
 
+    public String getServerId() {
+        return serverId;
+    }
+
+    public void setServerId(String serverId) {
+        this.serverId = normalizeServerId(serverId);
+    }
+
     public boolean isAutoJoinServer() {
         return autoJoinServer;
     }
@@ -377,6 +391,7 @@ public final class LauncherConfig {
             properties.setProperty(JAVA_PATH_KEY, javaPath);
             properties.setProperty(SERVER_HOST_KEY, serverHost);
             properties.setProperty(SERVER_PORT_KEY, Integer.toString(serverPort));
+            properties.setProperty(SERVER_ID_KEY, serverId);
             properties.setProperty(AUTO_JOIN_SERVER_KEY, Boolean.toString(autoJoinServer));
             properties.setProperty(DISCORD_AUTH_ENABLED_KEY, Boolean.toString(discordAuthEnabled));
             properties.setProperty(BACKEND_AUTH_ENABLED_KEY, Boolean.toString(backendAuthEnabled));
@@ -478,6 +493,13 @@ public final class LauncherConfig {
         }
 
         return stripTrailingSlash(value.trim());
+    }
+
+    private static String normalizeServerId(String value) {
+        if (value == null || value.isBlank() || value.contains("\r") || value.contains("\n") || value.length() > 128) {
+            return DEFAULT_SERVER_ID;
+        }
+        return value.trim();
     }
 
     private static String stripTrailingSlash(String value) {

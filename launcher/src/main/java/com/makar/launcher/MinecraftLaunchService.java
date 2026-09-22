@@ -14,16 +14,18 @@ import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.UUID;
-import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Consumer;
 
-public final class MinecraftLaunchService {
+public final class MinecraftLaunchService implements AutoCloseable {
     private static final String DEFAULT_VERSION_TYPE = "Forge";
     private static final String DEFAULT_LAUNCHER_NAME = "DeluxeWarfareLauncher";
-    private static final String DEFAULT_LAUNCHER_VERSION = "2.0.0";
+    private static final String DEFAULT_LAUNCHER_VERSION = "2.1.0";
 
     private final ObjectMapper objectMapper = new ObjectMapper();
+    private final Set<Thread> processLogThreads = ConcurrentHashMap.newKeySet();
 
     public Process startMinecraft(MinecraftLaunchOptions options, Consumer<String> logConsumer) {
         ProcessBuilder processBuilder = createProcessBuilder(options);
@@ -31,7 +33,17 @@ public final class MinecraftLaunchService {
 
         try {
             Process process = processBuilder.start();
-            CompletableFuture.runAsync(() -> streamProcessLog(process, logConsumer));
+            Thread logThread = new Thread(() -> {
+                try {
+                    streamProcessLog(process, logConsumer);
+                } finally {
+                    processLogThreads.remove(Thread.currentThread());
+                }
+            }, "minecraft-stdout-reader");
+            logThread.setDaemon(true);
+            logThread.setPriority(Thread.MIN_PRIORITY);
+            processLogThreads.add(logThread);
+            logThread.start();
             return process;
         } catch (IOException exception) {
             throw new MinecraftLaunchException("Unable to start Minecraft process.", exception);
@@ -93,10 +105,43 @@ public final class MinecraftLaunchService {
         return processBuilder;
     }
 
-    private void applyMemoryArguments(List<String> jvmArguments, int memoryGb) {
+    void applyMemoryArguments(List<String> jvmArguments, int memoryGb) {
         jvmArguments.removeIf(argument -> argument.startsWith("-Xmx") || argument.startsWith("-Xms"));
-        jvmArguments.add("-Xms4G");
-        jvmArguments.add("-Xmx" + Math.max(4, memoryGb) + "G");
+        int maximumGb = capMemoryForSystem(memoryGb, getTotalPhysicalMemoryBytes());
+        jvmArguments.add("-Xms512M");
+        jvmArguments.add("-Xmx" + maximumGb + "G");
+    }
+
+    static int capMemoryForSystem(int requestedGb, long totalPhysicalMemoryBytes) {
+        long totalGb = totalPhysicalMemoryBytes > 0
+                ? totalPhysicalMemoryBytes / 1024 / 1024 / 1024
+                : Math.max(8, requestedGb + 4L);
+        int allowedGb = (int) Math.max(1, totalGb - 4);
+        return Math.max(1, Math.min(Math.max(1, requestedGb), allowedGb));
+    }
+
+    private long getTotalPhysicalMemoryBytes() {
+        try {
+            java.lang.management.OperatingSystemMXBean bean =
+                    java.lang.management.ManagementFactory.getOperatingSystemMXBean();
+            if (bean instanceof com.sun.management.OperatingSystemMXBean extendedBean) {
+                return extendedBean.getTotalMemorySize();
+            }
+        } catch (RuntimeException ignored) { }
+        return -1;
+    }
+
+    @Override
+    public void close() {
+        for (Thread thread : List.copyOf(processLogThreads)) {
+            thread.interrupt();
+            try {
+                thread.join(2_000);
+            } catch (InterruptedException exception) {
+                Thread.currentThread().interrupt();
+                return;
+            }
+        }
     }
 
     private List<JsonNode> loadVersionChain(Path gameDirectory, JsonNode forgeVersionJson) {

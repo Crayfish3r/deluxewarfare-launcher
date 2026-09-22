@@ -1,8 +1,8 @@
 {
-    "version":  "2.1.1",
-    "url":  "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/launcher-2.1.1/DeluxeWarfareLauncher-Setup-2.1.1.exe",
-    "sha256":  "593c50eaaa8e4ee37a6cf66966f24cc82063c992e6d2e9df4f4f68c00c37f4f4",
-    "size":  47826097,
-    "mandatory":  true,
-    "notes":  "Обязательное обновление: исправлена повторная аутентификация через launcher broker в течение трёх часов."
+  "version": "2.1.1",
+  "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/launcher-2.1.1/DeluxeWarfareLauncher-Setup-2.1.1.exe",
+  "sha256": "593c50eaaa8e4ee37a6cf66966f24cc82063c992e6d2e9df4f4f68c00c37f4f4",
+  "size": 47826097,
+  "mandatory": true,
+  "notes": "Обязательное обновление: исправлена повторная аутентификация через launcher broker в течение трёх часов."
 }

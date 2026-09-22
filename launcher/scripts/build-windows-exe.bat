@@ -19,6 +19,12 @@ if not exist "build.gradle" (
   goto fail
 )
 
+if not defined MANIFEST_PUBLIC_KEY_SPKI (
+  echo ERROR: MANIFEST_PUBLIC_KEY_SPKI is required for an official build.
+  echo ERROR: MANIFEST_PUBLIC_KEY_SPKI is required for an official build. >> "%LOG_FILE%"
+  goto fail
+)
+
 where java >nul 2>nul
 if errorlevel 1 (
   echo ERROR: Java JDK 17 or newer is required.
@@ -70,7 +76,7 @@ jpackage --version >> "%LOG_FILE%" 2>&1
 echo.
 echo Building Java distribution...
 echo Building Java distribution... >> "%LOG_FILE%"
-call gradlew.bat clean installDist --stacktrace >> "%LOG_FILE%" 2>&1
+call gradlew.bat clean installDist -PmanifestPublicKeySpki=%MANIFEST_PUBLIC_KEY_SPKI% --stacktrace >> "%LOG_FILE%" 2>&1
 if errorlevel 1 (
   echo ERROR: Gradle build failed.
   goto fail
@@ -158,7 +164,6 @@ echo.
 echo Full log:
 echo %LOG_FILE%
 echo.
-pause
 exit /b 0
 
 :fail
@@ -170,5 +175,4 @@ echo.
 echo Last log lines:
 powershell -NoProfile -ExecutionPolicy Bypass -Command "if (Test-Path -LiteralPath '%LOG_FILE%') { Get-Content -LiteralPath '%LOG_FILE%' -Tail 80 }"
 echo.
-pause
 exit /b 1

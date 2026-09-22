@@ -1,6 +1,9 @@
 package com.makar.launcher;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sun.net.httpserver.HttpServer;
@@ -57,6 +60,41 @@ final class YandexDiskServiceTest {
                 service.resolveDownloadUri(
                         "https://disk.yandex.ru/d/test key",
                         "mods/file name+[1].jar").toString());
+    }
+
+    @Test
+    void classifiesTemporaryApiStatus() throws Exception {
+        YandexDiskService service = serviceReturningStatus(503);
+
+        YandexDiskService.YandexDiskException exception = assertThrows(
+                YandexDiskService.YandexDiskException.class,
+                () -> service.resolveDownloadUri("https://disk.yandex.ru/d/test", "launcher/latest.json"));
+
+        assertTrue(exception.isTemporaryFailure());
+    }
+
+    @Test
+    void classifiesPermanentApiStatus() throws Exception {
+        YandexDiskService service = serviceReturningStatus(404);
+
+        YandexDiskService.YandexDiskException exception = assertThrows(
+                YandexDiskService.YandexDiskException.class,
+                () -> service.resolveDownloadUri("https://disk.yandex.ru/d/test", "launcher/latest.json"));
+
+        assertFalse(exception.isTemporaryFailure());
+    }
+
+    private YandexDiskService serviceReturningStatus(int statusCode) throws Exception {
+        server = HttpServer.create(new InetSocketAddress("127.0.0.1", 0), 0);
+        server.createContext("/download", exchange -> {
+            exchange.sendResponseHeaders(statusCode, -1);
+            exchange.close();
+        });
+        server.start();
+        return new YandexDiskService(
+                HttpClient.newHttpClient(),
+                new ObjectMapper(),
+                "http://127.0.0.1:" + server.getAddress().getPort() + "/download");
     }
 
     private static Map<String, String> parseQuery(String rawQuery) {

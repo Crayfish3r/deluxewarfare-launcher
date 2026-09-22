@@ -16,6 +16,7 @@ public final class ManifestService {
     private final HttpClient httpClient;
     private final ObjectMapper objectMapper;
     private final MirrorDownloadResolver mirrorDownloadResolver;
+    private final ManifestSignatureVerifier signatureVerifier;
 
     public ManifestService() {
         this(HttpClient.newBuilder()
@@ -23,13 +24,22 @@ public final class ManifestService {
                 .followRedirects(HttpClient.Redirect.NORMAL)
                 .build(),
                 new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false),
-                new YandexDiskService());
+                new YandexDiskService(), null);
     }
 
     ManifestService(HttpClient httpClient, ObjectMapper objectMapper, MirrorDownloadResolver mirrorDownloadResolver) {
+        this(httpClient, objectMapper, mirrorDownloadResolver,
+                ManifestSignatureVerifier.allowUnsignedForTests(objectMapper));
+    }
+
+    ManifestService(HttpClient httpClient, ObjectMapper objectMapper, MirrorDownloadResolver mirrorDownloadResolver,
+                    ManifestSignatureVerifier signatureVerifier) {
         this.httpClient = httpClient;
         this.objectMapper = objectMapper;
         this.mirrorDownloadResolver = mirrorDownloadResolver;
+        this.signatureVerifier = signatureVerifier == null
+                ? ManifestSignatureVerifier.fromEmbeddedTrust(objectMapper)
+                : signatureVerifier;
     }
 
     public LauncherManifest downloadManifest(String manifestUrl) {
@@ -102,7 +112,8 @@ public final class ManifestService {
         }
 
         try {
-            return objectMapper.readValue(response.body(), LauncherManifest.class);
+            String signedPayload = signatureVerifier.verifyAndExtract(response.body());
+            return objectMapper.readValue(signedPayload, LauncherManifest.class);
         } catch (JsonProcessingException exception) {
             throw new ManifestServiceException("Manifest JSON is invalid.", exception);
         }

@@ -70,13 +70,26 @@ public final class BackendAuthService {
         );
     }
 
-    public GameTokenResponse requestGameToken(String launcherSessionToken, String nickname) {
+    public LaunchSessionResponse createLaunchSession(
+            String launcherSessionToken,
+            String nickname,
+            String serverId,
+            String serverAddress,
+            String publicKeySpki,
+            String clientBuildId
+    ) {
         return postJson(
-                "/game-token",
-                Map.of("nickname", nickname),
+                "/api/game-auth/launch-sessions",
+                Map.of(
+                        "nickname", nickname,
+                        "serverId", serverId,
+                        "serverAddress", serverAddress,
+                        "publicKeySpki", publicKeySpki,
+                        "clientBuildId", clientBuildId
+                ),
                 launcherSessionToken,
-                GameTokenResponse.class,
-                "Unable to request game token."
+                LaunchSessionResponse.class,
+                "Unable to create launch authentication session."
         );
     }
 
@@ -484,34 +497,43 @@ public final class BackendAuthService {
         }
     }
 
-    public static final class GameTokenResponse {
-        private boolean ok;
-        private String token = "";
-        private String nickname = "";
+    public static final class LaunchSessionResponse {
+        private String launchSessionId = "";
+        private String keyId = "";
+        private String serverId = "";
+        private String serverAddress = "";
         private long expiresAt;
 
-        public boolean isOk() {
-            return ok;
+        public String getLaunchSessionId() {
+            return launchSessionId;
         }
 
-        public void setOk(boolean ok) {
-            this.ok = ok;
+        public void setLaunchSessionId(String launchSessionId) {
+            this.launchSessionId = launchSessionId == null ? "" : launchSessionId;
         }
 
-        public String getToken() {
-            return token;
+        public String getKeyId() {
+            return keyId;
         }
 
-        public void setToken(String token) {
-            this.token = token == null ? "" : token;
+        public void setKeyId(String keyId) {
+            this.keyId = keyId == null ? "" : keyId;
         }
 
-        public String getNickname() {
-            return nickname;
+        public String getServerId() {
+            return serverId;
         }
 
-        public void setNickname(String nickname) {
-            this.nickname = nickname == null ? "" : nickname;
+        public void setServerId(String serverId) {
+            this.serverId = serverId == null ? "" : serverId;
+        }
+
+        public String getServerAddress() {
+            return serverAddress;
+        }
+
+        public void setServerAddress(String serverAddress) {
+            this.serverAddress = serverAddress == null ? "" : serverAddress;
         }
 
         public long getExpiresAt() {
