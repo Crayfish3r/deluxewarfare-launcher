@@ -3,6 +3,6 @@
   "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/launcher-3.0.1/DeluxeWarfareLauncher-Setup-3.0.1.exe",
   "sha256": "6f8919f6f9067f20a8a5fdf8d47a43d1f627734230c6b43867b48831db7c108c",
   "size": 50642342,
-  "mandatory": false,
+  "mandatory": true,
   "notes": "Discord или Telegram для верификации; улучшенный интерфейс; запуск без Ely.by при недоступности скин-системы."
 }
