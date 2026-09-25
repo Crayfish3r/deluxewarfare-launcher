@@ -1,8 +1,8 @@
 {
-  "version": "2.1.1",
-  "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/launcher-2.1.1/DeluxeWarfareLauncher-Setup-2.1.1.exe",
-  "sha256": "593c50eaaa8e4ee37a6cf66966f24cc82063c992e6d2e9df4f4f68c00c37f4f4",
-  "size": 47826097,
-  "mandatory": true,
-  "notes": "Обязательное обновление: исправлена повторная аутентификация через launcher broker в течение трёх часов."
+  "version": "3.0.1",
+  "url": "https://github.com/Crayfish3r/deluxewarfare-launcher/releases/download/launcher-3.0.1/DeluxeWarfareLauncher-Setup-3.0.1.exe",
+  "sha256": "6f8919f6f9067f20a8a5fdf8d47a43d1f627734230c6b43867b48831db7c108c",
+  "size": 50642342,
+  "mandatory": false,
+  "notes": "Discord или Telegram для верификации; улучшенный интерфейс; запуск без Ely.by при недоступности скин-системы."
 }
